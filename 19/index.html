@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人介绍网站</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=实际的key"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="assets/images/avatar-small.jpg" alt="头像" class="nav-avatar">
+                <div class="logo">黄越强</div>
+            </div>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="#home">首页</a>
+                    <a href="#about">关于</a>
+                    <a href="#skills">技能</a>
+                    <a href="#projects">项目</a>
+                    <a href="#contact">联系</a>
+                </div>
+                <button class="lang-switch" id="langSwitch">
+                    <span class="lang-text">EN</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 data-aos="fade-up">
+                <span>您好，我是</span>
+                <span class="highlight">黄越强</span>
+            </h1>
+            <p data-aos="fade-up" data-aos-delay="200">
+                全栈开发工程师 / 前端设计师 / 人工智能爱好者
+            </p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-image" data-aos="fade-right">
+                <div class="image-wrapper">
+                    <img src="assets/images/avatar.png" alt="黄越强的照片">
+                </div>
+            </div>
+            <div class="about-content" data-aos="fade-left">
+                <h2>自我评价</h2>
+                <p class="intro">热衷于探索前沿技术，专注于创造优秀的用户体验。我是一名充满激情的开发者，致力于将创意转化为现实。善于学习和接受新事物，具备良好的团队协作能力和问题解决能力。</p>
+                <div class="education" data-aos="fade-up">
+                    <h3>教育背景</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="time">2021 - 2025</div>
+                            <div class="content">
+                                <h4>大专学历</h4>
+                                <p>软件工程 - 广州白云学院</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="specialties" data-aos="fade-up">
+                    <h3>专业方向</h3>
+                    <div class="specialty-grid">
+                        <div class="specialty-item">
+                            <div class="specialty-icon">🌐</div>
+                            <h4>全栈开发</h4>
+                            <p>专注于现代化Web应用开发，熟悉前后端技术栈</p>
+                        </div>
+                        <div class="specialty-item">
+                            <div class="specialty-icon">🎨</div>
+                            <h4>UI设计</h4>
+                            <p>注重用户体验，擅长创造美观实用的界面设计</p>
+                        </div>
+                        <div class="specialty-item">
+                            <div class="specialty-icon">🤖</div>
+                            <h4>人工智能</h4>
+                            <p>对AI领域充满热情，持续学习最新技术发展</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlights" data-aos="fade-up">
+                    <div class="highlight-item" data-aos="zoom-in" data-aos-delay="100">
+                        <span class="number">4+</span>
+                        <span class="label">年开发经验</span>
+                    </div>
+                    <div class="highlight-item" data-aos="zoom-in" data-aos-delay="200">
+                        <span class="number">10+</span>
+                        <span class="label">实战项目</span>
+                    </div>
+                    <div class="highlight-item" data-aos="zoom-in" data-aos-delay="300">
+                        <span class="number">∞</span>
+                        <span class="label">学习热情</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="skills-container">
+            <h2 class="section-title" data-aos="fade-up">专业技能</h2>
+            
+            <!-- 主要技能类别 -->
+            <div class="skill-categories">
+                <!-- 前端开发 -->
+                <div class="skill-category" data-aos="fade-up">
+                    <h3>前端开发</h3>
+                    <div class="skill-grid">
+                        <div class="skill-item" data-progress="90">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML5/CSS3</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                    <li>响应式设计</li>
+                                    <li>动画效果</li>
+                                    <li>CSS预处理器</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-progress="85">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                    <li>ES6+特性</li>
+                                    <li>异步编程</li>
+                                    <li>DOM操作</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-progress="80">
+                            <div class="skill-info">
+                                <span class="skill-name">Vue.js</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                    <li>组件开发</li>
+                                    <li>状态管理</li>
+                                    <li>路由控制</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 后端开发 -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3>后端开发</h3>
+                    <div class="skill-grid">
+                        <div class="skill-item" data-progress="85">
+                            <div class="skill-info">
+                                <span class="skill-name">C# .NET MVC</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                    <li>Web API开发</li>
+                                    <li>数据库集成</li>
+                                    <li>MVC架构</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-progress="80">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-progress">
+                                <div class="progress-bar"></div>
+                            </div>
+                            <div class="skill-details">
+                                <ul>
+                                    <li>数据处理</li>
+                                    <li>自动化脚本</li>
+                                    <li>Web开发</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 其他技能 -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3>开发工具</h3>
+                    <div class="tools-grid">
+                        <div class="tool-item" data-aos="zoom-in" data-aos-delay="300">
+                            <i class="tool-icon">🔧</i>
+                            <span>Visual Studio</span>
+                        </div>
+                        <div class="tool-item" data-aos="zoom-in" data-aos-delay="400">
+                            <i class="tool-icon">🐍</i>
+                            <span>PyCharm</span>
+                        </div>
+                        <div class="tool-item" data-aos="zoom-in" data-aos-delay="500">
+                            <i class="tool-icon">🐳</i>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="tool-item" data-aos="zoom-in" data-aos-delay="600">
+                            <i class="tool-icon">⚡</i>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="awards-section" data-aos="fade-up">
+                <h3>荣誉奖项</h3>
+                <div class="awards-grid">
+                    <div class="award-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="award-icon">🏆</div>
+                        <div class="award-content">
+                            <h4>2023年广东省计算机设计大赛</h4>
+                            <p class="award-type">省级二等奖</p>
+                            <p class="award-desc">作品：基于深度学习的图像识别系统</p>
+                        </div>
+                        <div class="award-glow"></div>
+                    </div>
+
+                    <div class="award-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="award-icon">🎯</div>
+                        <div class="award-content">
+                            <h4>2023年全国大学生创新创业大赛</h4>
+                            <p class="award-type">校级特等奖</p>
+                            <p class="award-desc">项目：智能校园管理系统</p>
+                        </div>
+                        <div class="award-glow"></div>
+                    </div>
+
+                    <div class="award-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="award-icon">🌟</div>
+                        <div class="award-content">
+                            <h4>2022年互联网+创新创业大赛</h4>
+                            <p class="award-type">省级三等奖</p>
+                            <p class="award-desc">项目：智能家居控制系统</p>
+                        </div>
+                        <div class="award-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="projects-container">
+            <h2 class="section-title" data-aos="fade-up">项目展示</h2>
+            
+            <div class="projects-filter" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="web">Web应用</button>
+                <button class="filter-btn" data-filter="mobile">移动端</button>
+                <button class="filter-btn" data-filter="admin">管理后台</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- 项目卡片 1 -->
+                <div class="project-card" data-category="web" data-aos="fade-up">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/images/project1.jpg" alt="项目预览">
+                            <div class="project-overlay">
+                                <h3>个人作品展示网站</h3>
+                                <p>基于HTML5/CSS3的响应式设计</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>技术栈</h3>
+                            <ul class="tech-stack">
+                                <li>HTML5/CSS3</li>
+                                <li>JavaScript</li>
+                                <li>响应式设计</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="link-icon">🔗</i>
+                                    预览
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="link-icon">📂</i>
+                                    源码
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目卡片 2 -->
+                <div class="project-card" data-category="mobile" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/images/project2.jpg" alt="项目预览">
+                            <div class="project-overlay">
+                                <h3>移动端APP</h3>
+                                <p>基于Vue的移动端应用</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>技术栈</h3>
+                            <ul class="tech-stack">
+                                <li>uniapp</li>
+                                <li>Vant UI</li>
+                                <li>移动端适配</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="link-icon">🔗</i>
+                                    预览
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="link-icon">📂</i>
+                                    源码
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 项目卡片 3 -->
+                <div class="project-card" data-category="admin" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <img src="assets/images/project3.jpg" alt="项目预览">
+                            <div class="project-overlay">
+                                <h3>企业管理系统</h3>
+                                <p>基于.NET的后台管理系统</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3>技术栈</h3>
+                            <ul class="tech-stack">
+                                <li>C# .NET</li>
+                                <li>SQL Server</li>
+                                <li>Bootstrap</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="link-icon">🔗</i>
+                                    预览
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="link-icon">📂</i>
+                                    源码
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2 class="section-title" data-aos="fade-up">联系我</h2>
+            
+            <!-- 联系信息卡片 -->
+            <div class="contact-info">
+                <div class="info-card" data-aos="fade-up">
+                    <div class="card-content">
+                        <div class="info-icon">📧</div>
+                        <h3>邮箱</h3>
+                        <p>2142669897@qq.com</p>
+                        <div class="hover-effect"></div>
+                    </div>
+                </div>
+                <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-content">
+                        <div class="info-icon">📱</div>
+                        <h3>电话</h3>
+                        <p>+86 18934389613</p>
+                        <div class="hover-effect"></div>
+                    </div>
+                </div>
+                <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-content location-card" data-location="广州">
+                        <div class="info-icon">📍</div>
+                        <h3>地址</h3>
+                        <p>中国，广州</p>
+                        <div class="hover-effect"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 社交媒体链接 -->
+            <div class="social-links" data-aos="fade-up">
+                <a href="#" class="social-link" data-type="wechat">
+                    <div class="social-icon">
+                        <i class="fab">📱</i>
+                        <span>微信</span>
+                    </div>
+                </a>
+                <a href="https://github.com/huangyueqiang" class="social-link" target="_blank">
+                    <div class="social-icon">
+                        <i class="fab">💻</i>
+                        <span>GitHub</span>
+                    </div>
+                </a>
+                <a href="#" class="social-link" target="_blank">
+                    <div class="social-icon">
+                        <i class="fab">📝</i>
+                        <span>博客</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 联系表单 -->
+            <div class="contact-form-container" data-aos="fade-up">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <div class="input-group" data-aos="fade-right">
+                            <input type="text" id="name" required>
+                            <label for="name">您的姓名</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="input-group" data-aos="fade-left">
+                            <input type="email" id="email" required>
+                            <label for="email">您的邮箱</label>
+                            <span class="focus-border"></span>
+                        </div>
+                    </div>
+                    <div class="input-group" data-aos="fade-up">
+                        <input type="text" id="subject" required>
+                        <label for="subject">主题</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <div class="input-group" data-aos="fade-up">
+                        <textarea id="message" required></textarea>
+                        <label for="message">留言内容</label>
+                        <span class="focus-border"></span>
+                    </div>
+                    <button type="submit" class="submit-btn" data-aos="zoom-in">
+                        发送消息
+                        <span class="btn-effect"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 黄越强. All Rights Reserved.</p>
+            <p class="footer-quote">「持续学习，不断进步」</p>
+        </div>
+    </footer>
+
+    <!-- 在 body 标签结束前添加 -->
+    <div class="modal" id="wechatModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="qr-container">
+                <img src="assets/images/wechat-qr.jpg" alt="微信二维码" class="qr-code">
+                <p>扫描二维码添加微信</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="mapModal">
+        <div class="modal-content map-modal">
+            <span class="close-btn">&times;</span>
+            <div class="map-container">
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="js/main.js"></script>
+</html> 

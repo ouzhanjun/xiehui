@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/1.css"/>
+		<link rel="stylesheet" type="text/css" href="css/购物车页面.css"/>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.taohan {
+			width: 70%;
+			margin: 0 auto;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			position: relative;
+			z-index: 2;
+		}
+		.sy ul{
+				display: flex;	
+		}
+		.sy li{
+			margin-left: 10px;
+		}
+		.sy{
+							margin-right: 40%;
+		}
+		.tp-1{
+			display: block;
+			    width: 125px;
+			    height: 24px;
+		}
+		.dingdan{
+			display: flex;
+		}
+		.dingdan p{
+			margin-right: 10px;
+		}
+	</style>
+	<body>
+		<div class="taohan">
+			<a href="index.html"><img src="img/魅族1.png" class="tp-1"></a>
+				
+				<div class="sy">
+					<ul>
+						<li><a href="#">购物车</a></li>
+						<li><a href="#">></a></li>
+						<li><a href="#">确认订单</a></li>
+						<li><a href="#">></a></li>
+						<li><a href="#">在线支付</a></li>
+						<li><a href="#">></a></li>
+						<li><a href="#">完成</a></li>
+					</ul>
+				</div>
+			    <div class="dingdan">
+					<p>我的订单</p>
+					<p>登录</p>
+					<p>注册</p>
+				</div>
+			</div>
+			<div id="app">
+				<div class="a">
+					<ul>
+						<li v-for="(i,index) in pics">
+							<img :src="i.imgsrc">
+							<p>{{i.name}}</p>
+							<h3>{{i.price}}元</h3>
+							<span>{{i.eva}}</span>
+							<div @click="add(index)">加入购物车</div>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="b">
+				<div class="qx"><p style="width: 40px;">全选</p>
+					<div class="annu">
+						<input type="checkbox" v-model="qx"/>
+					</div>
+					</div>
+				
+						<p style="width: 300px;">商品名称</p>
+							<p style="width: 135px;">单价</p>
+								<p style="width: 200px;">数量</p>
+								<p style="width: 200px;">金额</p>
+									<p style="width: 100px;">操作</p>
+				</div>
+				<div class="c">
+				<ul>
+					<li v-for="(i,index) in cart">
+						<div class="annu">
+							<input type="checkbox" name="" id="" value="" v-model="i.check" @change="com()" />
+						</div>
+						<p style="width: 200px; text-align: center;"><img :src="i.imgsrc" alt=""></p>
+						<span class="name">{{i.name}}</span>
+						<span class="price">{{i.price}}元</span>
+						<span class="num">
+							<button type="button" @click="i.num>1?i.num--:i.num=1;com()">-</button>
+							{{i.num}} 
+								<button type="button" @click="i.num++;com()">+</button>
+							
+						
+						</span>
+						<span class="money">{{i.num*i.price}}元</span>
+						<span class="del" @click="del(index)">x</span>
+					</li>
+				</ul>
+				</div>
+				
+				<div class="js">
+					<div class="left">
+						<p><input type="checkbox" v-model="qx"/>全选</p>
+						<a href="#" @click="delcheck()">删除</a>
+					</div>
+					<div class="right">
+						<p>以选商品{{numAll}}</p>
+						<p>合计{{total}}</p>
+						<button type="button">结算</button>
+					</div>
+				</div>
+				
+				</div>
+	</body>
+	<script type="text/javascript">
+		var app=new Vue({
+						  el:"#app",
+						  data:{
+						      pics:[
+								   {name:'魅族10000mAh1',imgsrc:'img/img01.jpg',price:99,eva:'2.5万人评价'},
+								    {name:'魅族10000mAh2',imgsrc:'img/img02.jpg',price:99,eva:'2.5万人评价'},
+									 {name:'魅族10000mAh3',imgsrc:'img/img03.jpg',price:99,eva:'2.5万人评价'},
+									  {name:'魅族10000mAh4',imgsrc:'img/img04.jpg',price:99,eva:'2.5万人评价'}
+									  ],
+									  cart:[
+										   {name:'魅族10000mAh1',imgsrc:'img/img01.jpg',price:99,num:1,check:false}
+									  ],
+									  qx:false,numAll:0,total:0
+									  
+						  },
+						  methods:{
+							  add(i){
+								  var bool=false
+								  for(var k=0;k<this.cart.length;k++)
+								  {
+									  if(this.pics[i].name==this.cart[k].name){
+										  this.cart[k].num++;
+										  bool=true;
+										  break;
+									  }
+								  }
+								  if(bool==false)
+								  {
+									  var newsp={name:this.pics[i].name,imgsrc:this.pics[i].imgsrc,price:this.pics[i].price,num:1}
+									  this.cart.push(newsp)
+								  }
+								  this.com();
+							
+						  },
+						  del(i){
+							  this.cart.splice(i,1)
+							  this.com()
+						  },
+						  com(){
+							  this.numAll=0;
+							  this.total=0;
+							  this.cart.forEach(item=>{
+								  if(item.check){
+									  this.numAll+=item.num;
+									  this.total+=item.num*item.price
+								  }
+							  })
+						  },
+						  //删除
+						 delcheck(){
+							 var ids=[];
+							 this.cart.forEach((item,index)=>{
+								 if(item.check){
+									 ids.push(index)
+								 }
+							 })
+							 for(var i=ids.length-1;i>=0;i--){
+								 this.cart.splice(ids[i],1);
+							 }
+							 this.com()
+						 },
+						 
+						  },
+						  watch:{
+							  qx(val){
+								  console.log(val);
+								  this.cart.forEach(item=>{
+									  item.check=val;
+								  })
+								  this.com()
+							  }
+						  }
+		})
+	</script>
+</html>

@@ -1,0 +1,180 @@
+      body {
+      	margin: 0;
+      	padding: 0;
+      	background-color: #262e40;
+      	display: flex;
+      	justify-content: center;
+      	align-items: center;
+      	min-height: 100vh
+      }
+
+      .diagram {
+      	position: relative;
+      	width: 500px;
+      	height: 500px;
+      	display: flex;
+      	justify-content: center;
+      	align-items: center
+      }
+
+      .center-box {
+      	width: 200px;
+      	height: 130px;
+      	background-color: #00F;
+      	color: #FFF;
+      	display: flex;
+      	justify-content: center;
+      	align-items: center;
+      	position: relative;
+      	background-image: url('../img/indexMyData.png');
+      	background-repeat: no-repeat;
+      	background-size: 100%;
+      	padding-top: 38px;
+      	box-sizing: border-box;
+      	font-size: 12px;
+      	color: #fff
+      }
+
+      .node {
+      	width: 120px;
+      	height: 120px;
+      	display: flex;
+      	justify-content: center;
+      	align-items: center;
+      	color: #000;
+      	position: absolute;
+      	clip-path: polygon(50%0%, 90%20%, 90%60%, 50%80%, 10%60%, 10%20%);
+      	z-index: 2;
+      	background-repeat: no-repeat;
+      	background-size: 100%;
+      	padding-top: 38px;
+      	box-sizing: border-box;
+      	font-size: 12px;
+      	color: #fff
+      }
+
+      .node.contact-information {
+      	transform: rotate(0deg)translate(260px)rotate(-0deg);
+      	background-image: url('../img/index2.png');
+      	background-position: -3px 3px
+      }
+
+      .node.self-evaluation {
+      	transform: rotate(45deg)translate(260px)rotate(-45deg);
+      	background-image: url('../img/index1.png');
+      	background-position: -3px -3px
+      }
+
+      .node.education-experience {
+      	transform: rotate(90deg)translate(260px)rotate(-90deg);
+      	background-image: url('../img/index3.png');
+      	background-position: -3px 5px
+      }
+
+      .node.interests-hobbies {
+      	transform: rotate(135deg)translate(260px)rotate(-135deg);
+      	background-image: url('../img/index6.png');
+      	background-position: -3px 5px
+      }
+
+      .node.personal-honor {
+      	transform: rotate(180deg)translate(260px)rotate(-180deg);
+      	background-image: url('../img/index7.png');
+      	background-position: 1px 5px
+      }
+
+      .node.basic-information {
+      	transform: rotate(225deg)translate(260px)rotate(-225deg);
+      	background-image: url('../img/index4.png');
+      	background-position: 1px 5px
+      }
+
+      .node.communication {
+      	transform: rotate(270deg)translate(260px)rotate(-270deg);
+      	background-image: url('../img/index5.png');
+      	background-position: 1px 1px
+      }
+
+      .node.personal-motto {
+      	transform: rotate(315deg)translate(260px)rotate(-315deg);
+      	background-image: url('../img/index8.png');
+      	background-position: 0px 3px
+      }
+
+      .line {
+      	position: absolute;
+      	border: 1px dashed #00ff00;
+      	z-index: 1;
+      	width: 170px
+      }
+
+      .line::before {
+      	content: "";
+      	position: absolute;
+      	width: 0;
+      	height: 0;
+      	top: -10px;
+      	border-top: 10px solid transparent;
+      	border-bottom: 10px solid transparent;
+      	border-left: 10px solid #00ff00;
+      	transform: rotate(180deg);
+      }
+
+      .line.work-line {
+      	transform: rotate(0deg)translate(150px)rotate(0deg)
+      }
+
+      .line.self-line {
+      	transform: rotate(45deg)translate(150px)rotate(0deg)
+      }
+
+      .line.edu-line {
+      	transform: rotate(90deg)translate(150px)rotate(0deg)
+      }
+
+      .line.hobby-line {
+      	transform: rotate(135deg)translate(150px)rotate(0deg)
+      }
+
+      .line.contact-line {
+      	transform: rotate(180deg)translate(150px)rotate(0deg)
+      }
+
+      .line.basic-line {
+      	transform: rotate(225deg)translate(150px)rotate(0deg)
+      }
+
+      .line.comm-line {
+      	transform: rotate(270deg)translate(150px)rotate(0deg)
+      }
+
+      .line.motto-line {
+      	transform: rotate(315deg)translate(150px)rotate(0deg)
+      }
+
+      @keyframes arrowTransition {
+      	0% {
+      		transform: rotate(0deg)translate(150px)rotate(180deg);
+      	}
+
+      	100% {
+      		transform: rotate(0deg)translate(0px)rotate(180deg);
+      	}
+      }
+
+      @keyframes lines {
+      	0% {
+      		transform: rotate(0deg)translate(150px)rotate(180deg);
+      	}
+
+      	100% {
+      		transform: rotate(0deg)translate(0px)rotate(180deg);
+      	}
+      }
+
+
+      .arrow-transition::before {
+      	animation: arrowTransition 4s linear forwards;
+      	animation-iteration-count: infinite;
+      	animation-delay: 1s;
+      }

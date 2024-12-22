@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="index.css" />
+		<style>
+		    
+		</style>
+	</head>
+	<body>
+		
+		<div class="shouye">
+			<div class="right">
+				<h1>欢迎来访</h1>
+				<h2>My homepage</h2>
+				<h3>我的主页</h3>
+				<p>亚托利-我的挚爱时光</p>
+				<h4>版权所有满穗OvO&copy;1649654339@qq.com</h4>
+			</div>
+			<div class="left"></div>
+			<div class="touxiang"></div>
+			<div class="bottom">
+				<div class="caidan">
+					<div class="zhuye"><img src="img/logo/wodezhuye.png"/ width="25px" height="25px">&nbsp;&nbsp;<a href="#" class="zhuye">我的主页</a></div>
+					<div><img src="img/logo/gerenziliao-kuaizhuang.png"/ width="25px" height="25px">&nbsp;&nbsp;<a href="gerenziliuao1.html">个人资料</a></div>
+					<div><img src="img/logo/jineng.png"/ width="25px" height="25px">&nbsp;&nbsp;<a href="#">掌握技能</a></div>
+					<div><img src="img/logo/a-bianzu90.png"/ width="25px" height="25px">&nbsp;&nbsp;<a href="#">求职意向</a></div>
+					<div><img src="img/logo/zhuyaochanpin.png"/ width="25px" height="25px">&nbsp;&nbsp;<a href="#">主修技能</a></div>
+					<div><img src="img/logo/pingjia.png"/ width="25px" height="25px">&nbsp;&nbsp;<a href="#">自我评价</a></div>
+					<div><img src="img/logo/tuandui.png"/ width="25px" height="25px">&nbsp;&nbsp;<a href="#">我的团队</a></div>
+				</div>
+			</div>
+		</div>
+		<canvas id="snow"></canvas>
+		
+		    <script>
+		        // 获取 canvas 元素和上下文
+		        const canvas = document.getElementById('snow');
+		        const ctx = canvas.getContext('2d');
+		
+		        // 设置 canvas 尺寸为窗口尺寸
+		        canvas.width = window.innerWidth;
+		        canvas.height = window.innerHeight;
+		
+		        // 监听窗口大小变化，动态调整 canvas 尺寸
+		        window.addEventListener('resize', function() {
+		            canvas.width = window.innerWidth;
+		            canvas.height = window.innerHeight;
+		        });
+		
+		        // 雪花类
+		        class Snowflake {
+		            constructor() {
+		                this.x = Math.random() * canvas.width; // 雪花初始x坐标
+		                this.y = Math.random() * canvas.height; // 雪花初始y坐标
+		                this.radius = Math.random() * 3 + 1; // 雪花半径
+		                this.speedX = Math.random() * 1 - 0.5; // 雪花水平速度
+		                this.speedY = Math.random() * 1 + 0.5; // 雪花垂直速度
+		                this.opacity = Math.random() * 0.5 + 0.5; // 雪花透明度
+		            }
+		
+		            update() {
+		                this.x += this.speedX;
+		                this.y += this.speedY;
+		
+		                // 如果雪花超出底部边界，则重置到顶部
+		                if (this.y > canvas.height) {
+		                    this.y = 0;
+		                }
+		
+		                // 如果雪花超出左右边界，则重置到另一边
+		                if (this.x > canvas.width || this.x < 0) {
+		                    this.x = Math.random() * canvas.width;
+		                }
+		            }
+		
+		            draw() {
+		                ctx.beginPath();
+		                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+		                ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`; // 雪花颜色和透明度
+		                ctx.fill();
+		            }
+		        }
+		
+		        // 创建雪花数组
+		        let snowflakes = [];
+		        const numberOfSnowflakes = 200; // 雪花数量
+		
+		        // 初始化雪花
+		        for (let i = 0; i < numberOfSnowflakes; i++) {
+		            snowflakes.push(new Snowflake());
+		        }
+		
+		        // 动画循环
+		        function animate() {
+		            ctx.clearRect(0, 0, canvas.width, canvas.height); // 清除画布
+		
+		            for (let flake of snowflakes) {
+		                flake.update();
+		                flake.draw();
+		            }
+		
+		            requestAnimationFrame(animate); // 请求下一帧
+		        }
+		
+		        animate(); // 启动动画
+		    </script>
+	</body>
+</html>

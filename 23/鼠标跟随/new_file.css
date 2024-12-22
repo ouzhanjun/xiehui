@@ -1,0 +1,23 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+}
+body{
+	height: 100vh;
+	background:linear-gradient(200deg,#0256c3,#2398ff) ;
+}
+#plane{
+	color: #ffffff;
+	font-size: 70px;
+	width:70px;
+	height: 70px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人主页</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <script src="js/script.js"></script>
+</head>
+
+<body>
+  <!-- 头部区域 -->
+  <header>
+    <div class="logo">
+      <img src="img/头像.jpg" alt="头像" class="avatar">
+      <h1>施立凡</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about-me" id="toggleButton">关于我</a></li>
+		<div id="mySidebar" class="sidebar">
+		  <div class="information">
+		    <img src="img/头像.jpg" alt="">
+			<div>
+			  <a href="#">姓名：施立凡</a>
+			  <a href="#">年龄：19</a>
+			  <a href="#">性别：男</a>
+			  <a href="#">爱好：和平</a>
+			</div>
+		  </div>
+		  <a>你好，我叫施立凡，目前居住在广州。我毕业于白云工商，专业是程序设计。在我的职业生涯中取得了显著的成绩。我擅长的技能使我能够有效地解决问题和实现目标。我相信，我的专业背景和个人特质使我能够为团队带来价值。我期待有机会进一步讨论我如何为团队做出贡献。感谢你考虑我的介绍。
+		  </a>
+		</div>
+        <li><a href="#works">作品展示</a></li>
+        <li><a href="https://www.baiyunairport.com/">校园官网</a></li>
+        <li><a href="#contact">联系我</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 主体内容区域 -->
+  <main>
+	<button id="backToTopButton" title="返回顶部" style="display: none;">↑</button>
+    <!-- 焦点展示区 -->
+    <section id="featured" class="featured-section">
+		
+		
+		
+		
+		
+		
+      <div class="featured-content" >
+        <h2>欢迎来到我的个人主页</h2>
+        <p>这里是我分享生活与展示作品的小天地，快来一起探索吧！</p>
+      </div>
+    </section>
+
+    <!-- 技能专长板块 -->
+    <section id="skills" class="skills-section">
+      <h2>我的技能专长</h2>
+      <div class="skill-icons">
+        <div class="skill-icon">
+          <img src="img/HTML5.png" alt="" class="zoom">
+          <p>HTML5</p>
+        </div>
+        <div class="skill-icon">
+          <img src="img/Python.png" alt="设计技能" id="zoom">
+          <p>Python</p>
+        </div>
+        <div class="skill-icon">
+          <img src="img/Visual_Studio.png" alt="写作技能" id="zoom">
+          <p>Visual Studio</p>
+        </div>
+		<div class="skill-icon">
+		  <img src="img/Visual_studio_code.png" alt="写作技能" id="zoom">
+		  <p>Node</p>
+		</div>
+      </div>
+    </section>
+
+    <!-- 作品展示板块（精选） -->
+    <section id="works" class="works-section">
+      <h2>作品展示</h2>
+      <div class="work-cards">
+        <div class="work-card">
+          <img src="img/用户管理.png" alt="作品1">
+          <h3>用户管理</h3>
+          <p>使用Visual Studio实现用户数据的增删改查,通过账户验证区分管理员权限,编辑个人资料以及拓展应用。</p>
+        </div>
+        <div class="work-card">
+          <img src="img/网页爬取.png" alt="作品2">
+          <h3>网页爬取</h3>
+		  <p>使用Python对网站数据进行爬取并下载到指定的数据库中</p>
+        </div>
+		<div class="work-card">
+		  <img src="img/用户管理.png" alt="作品3">
+		  <h3>用户管理</h3>
+          <p>使用Visual Studio实现用户数据的增删改查,通过账户验证区分管理员权限,编辑个人资料以及拓展应用。</p>
+		</div>
+		<div class="work-card">
+		  <img src="img/用户管理.png" alt="作品1">
+		  <h3>用户管理</h3>
+		  <p>使用Visual Studio实现用户数据的增删改查,通过账户验证区分管理员权限,编辑个人资料以及拓展应用。</p>
+		</div>
+		<div class="work-card">
+		  <img src="img/网页爬取.png" alt="作品2">
+		  <h3>网页爬取</h3>
+		  <p>使用Python对网站数据进行爬取并下载到指定的数据库中</p>
+		</div>
+		<div class="work-card">
+		  <img src="img/用户管理.png" alt="作品3">
+		  <h3>用户管理</h3>
+		  <p>使用Visual Studio实现用户数据的增删改查,通过账户验证区分管理员权限,编辑个人资料以及拓展应用。</p>
+		</div>
+
+      </div>
+    </section>
+
+    <!-- 个人成就板块 -->
+    <section id="achievements" class="achievements-section">
+      <h2>个人成就</h2>
+      <ul class="achievement-list">
+        <li>获得XX奖项</li>
+        <li>完成XX项目</li>
+        <li>取得XX证书</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- 侧边栏（可选，这里简单示例） -->
+  <aside>
+    <h3>社交媒体</h3>
+    <ul id="contact" class="social-links">
+      <li><a href="#"><img src="img/QQ.png" alt="QQ">2423488357@qq.com</a></li>
+      <li><a href="#"><img src="img/微信.png" alt="微信">13710034195</a></li>
+      <li><a href="#"><img src="img/email.png" alt="Email">slf2423488357@email.com</a></li>
+    </ul>
+  </aside>
+
+  <!-- 底部区域 -->
+  <footer>
+    <p>版权所有 &copy; 施立凡 [2024-12]</p>
+    <p>联系邮箱：your_email@example.com</p>
+  </footer>
+</body>
+</html>

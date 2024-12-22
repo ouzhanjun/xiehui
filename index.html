@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>软件协会 - 首页</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="软件协会logo">
+                <h1 class="site-title">软件协会</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="about.html">关于我们</a></li>
+                <li><a href="projects.html">作品展示</a></li>
+                <li><a href="contact.html">联系我们</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 轮播图部分 -->
+    <div class="slider">
+        <div class="slider-container">
+            <div class="slides">
+                <div class="slide"><img src="images/slide1.jpg" alt="幻灯片1"></div>
+                <div class="slide"><img src="images/slide2.jpg" alt="幻灯片2"></div>
+                <div class="slide"><img src="images/slide3.jpg" alt="幻灯片3"></div>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </div>
+
+    <!-- 作品展示部分 -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>竞赛作品展示</h2>
+            <div class="project-grid">
+                <div class="project-card" v-for="(item,index) in items" :key="index">
+                    <img v-bind:src="item.image" width="100px">
+                    <h3>{{item.name}}</h3>
+                    <a v-bind:href="item.href" target="_blank" class="project-link">查看详情</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚部分 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>联系我们</h3>
+                    <p>53970429@qq.com</p>
+                    <p>电话：15218868977</p>
+                </div>
+                <div class="footer-section">
+                    <h3>关注我们</h3>
+                    <div class="social-links">
+                        <a href="https://mp.weixin.qq.com/s/AmvpF4sU0o1InR25E0P6fQ">微信</a>
+                        <a href="#">微博</a>
+                        <a href="#">GitHub</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>地址</h3>
+                    <p>信息工程系软件协会</p>
+                    <p>广东省广州市白云区江高镇田南路13号</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 软件协会 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+    
+    <script>
+        Vue.createApp({
+            //data方法专门放数据
+            data() {
+                return {
+                    items: []
+                }
+            },
+            mounted(){
+                for(let i=1;i<=24;i++){
+                    this.items.push({href:i+"/index.html",name:"作品"+i,image:"images/"+i+".jpg"})
+                }
+            }
+        }).mount('#projects')
+    </script>
+</body>
+</html> 

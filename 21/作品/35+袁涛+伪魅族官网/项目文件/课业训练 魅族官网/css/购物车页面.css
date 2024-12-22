@@ -1,0 +1,72 @@
+*{
+	list-style: none;
+		text-align: center;
+}
+#app{
+   margin-top: 20px;
+}
+.a{
+	width: 1000px;
+	/* background-color: red; */
+	margin: 0 auto;
+}
+.b ,.c{
+	width: 85%;
+	margin: 0 auto;
+	
+}
+.a ul{
+		margin-left: 1%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.b {
+	display: flex;
+	align-items: center;
+	margin-left: 10%;
+	margin-top: 5%;
+}
+.c{
+	margin-left: 11.5%;
+}
+.c  li{
+	display: flex;
+	flex-direction: row;
+	word-break:break-all
+}
+.c span{
+	padding: 70px;
+}
+p{
+	font-size: 14px;
+}
+h3{
+	font-size: 12px;
+}
+span{
+	font-size: 12px;
+}
+.je{
+	width: 40px;
+	height: 20px;
+}
+.qx{
+	margin-left: 95px;
+	width: 120px;
+	display: flex;
+	align-items: center;
+}
+.js{
+	width: 60%;
+	margin: 0 auto;
+}
+.js .left{
+	float: left;
+}
+.js .right{
+	float: right;
+}
+.annu{
+	
+}

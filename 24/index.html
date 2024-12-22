@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<title>个人介绍</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<style>
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+
+			to {
+				opacity: 1;
+			}
+		}
+	</style>
+	
+	<body>
+		<div class="card">
+			<div class="card-content">
+				<div class="profile">
+					<img src="img/吉利蛋.png" alt="头像" class="avatar">
+					<div class="profile-info">
+						<h1>黎泓声</h1>
+						<p>热爱钻研计算机技术的青少年</p>
+						<div class="social-links">
+							<a href="https://github.com/KarmaSprite" target="_blank" rel="noopener noreferrer">
+								<svg t="1734340386487" class="icon" viewBox="0 0 1024 1024" version="1.1"
+									xmlns="http://www.w3.org/2000/svg" p-id="958" width="200" height="200">
+									<path
+										d="M64 512c0 195.2 124.8 361.6 300.8 422.4 22.4 6.4 19.2-9.6 19.2-22.4v-76.8c-134.4 16-140.8-73.6-150.4-89.6-19.2-32-60.8-38.4-48-54.4 32-16 64 3.2 99.2 57.6 25.6 38.4 76.8 32 105.6 25.6 6.4-22.4 19.2-44.8 35.2-60.8-144-22.4-201.6-108.8-201.6-211.2 0-48 16-96 48-131.2-22.4-60.8 0-115.2 3.2-121.6 57.6-6.4 118.4 41.6 124.8 44.8 32-9.6 70.4-12.8 112-12.8 41.6 0 80 6.4 112 12.8 12.8-9.6 67.2-48 121.6-44.8 3.2 6.4 25.6 57.6 6.4 118.4 32 38.4 48 83.2 48 131.2 0 102.4-57.6 188.8-201.6 214.4 22.4 22.4 38.4 54.4 38.4 92.8v112c0 9.6 0 19.2 16 19.2C832 876.8 960 710.4 960 512c0-246.4-201.6-448-448-448S64 265.6 64 512z"
+										fill="#040000" p-id="959"></path>
+								</svg>
+							</a>
+							<a href="mailto:example@example.com">
+								<svg t="1734340482935" class="icon" viewBox="0 0 1024 1024" version="1.1"
+									xmlns="http://www.w3.org/2000/svg" p-id="1105" width="200" height="200">
+									<path
+										d="M838.954667 234.666667H170.666667c-3.626667 0-7.168 0.448-10.56 1.322666l323.690666 323.669334a21.333333 21.333333 0 0 0 30.165334 0L838.954667 234.666667z m46.144 14.186666l-260.693334 260.693334 262.933334 262.912c5.44-7.168 8.661333-16.106667 8.661333-25.792V277.333333c0-10.944-4.117333-20.906667-10.88-28.48zM843.861333 789.333333l-249.6-249.621333-50.133333 50.133333a64 64 0 0 1-90.517333 0l-50.112-50.133333L156.373333 786.88c4.48 1.578667 9.28 2.453333 14.314667 2.453333h673.194667zM128.661333 754.218667L373.333333 509.525333 129.578667 265.813333A42.709333 42.709333 0 0 0 128 277.333333v469.333334c0 2.56 0.213333 5.098667 0.661333 7.552zM170.666667 192h682.666666a85.333333 85.333333 0 0 1 85.333334 85.333333v469.333334a85.333333 85.333333 0 0 1-85.333334 85.333333H170.666667a85.333333 85.333333 0 0 1-85.333334-85.333333V277.333333a85.333333 85.333333 0 0 1 85.333334-85.333333z"
+										fill="#333333" p-id="1106"></path>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="tabs">
+					<button class="tab active" data-tab="about">关于我</button>
+					<button class="tab" data-tab="skills">技能</button>
+					<button class="tab" data-tab="projects">作品</button>
+					<button class="tab" data-tab="contact">联系我</button>
+				</div>
+
+				<div id="about" class="tab-content about-content active">
+					<p>&emsp;&emsp;我是一个热爱钻研计算机技术的青少年，从小开始对计算机有比较大的兴趣。目前我专注于网站开发领域，我还自己发起建立了一个制作游戏的团队，希望能和大家合作，一同创造属于我们自己的作品。
+					</p>
+					<ul class="about-grid">
+						<li><strong>年龄：</strong>17</li>
+						<li><strong>性别：</strong>男</li>
+						<li><strong>联系方式：</strong>13800000000</li>
+						<li><strong>主页：</strong>www.example.com</li>
+					</ul>
+				</div>
+
+				<div id="skills" class="tab-content skills-content">
+					<div class="skills-grid">
+						<div class="skill-item">
+							<div class="abbreviation ps">PS</div>
+							<div class="full-name">Photoshop</div>
+							<div class="description">图像处理和设计</div>
+						</div>
+						<div class="skill-item">
+							<div class="abbreviation dw">DW</div>
+							<div class="full-name">Dreamweaver</div>
+							<div class="description">网页设计和开发</div>
+						</div>
+						<div class="skill-item">
+							<div class="abbreviation html">HTML</div>
+							<div class="full-name">HTML5</div>
+							<div class="description">网页结构和内容</div>
+						</div>
+						<div class="skill-item">
+							<div class="abbreviation css">CSS</div>
+							<div class="full-name">CSS3</div>
+							<div class="description">网页样式和布局</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="projects" class="tab-content projects-content">
+					<div class="projects-grid">
+						<div class="project-item">
+							<img src="img/案例1.png" alt="个人博客系统">
+							<div class="project-item-content">
+								<h3>个人博客系统</h3>
+								<p>使用PHP和MySQL开发的完整博客系统</p>
+							</div>
+						</div>
+						<div class="project-item">
+							<img src="img/案例2.png" alt="小游戏集合">
+							<div class="project-item-content">
+								<h3>小游戏集合</h3>
+								<p>使用HTML5和JavaScript开发的多个小游戏</p>
+							</div>
+						</div>
+						<div class="project-item">
+							<img src="img/案例3.png" alt="响应式企业网站">
+							<div class="project-item-content">
+								<h3>响应式企业网站</h3>
+								<p>采用Bootstrap框架开发的企业展示网站</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="contact" class="tab-content contact-content">
+					<h3>联系我</h3>
+					<p>如果您有任何问题或合作意向，欢迎随时与我联系。我会尽快回复您的消息。</p>
+					<ul>
+						<li><strong>邮箱：</strong><a href="mailto:example@example.com">example@example.com</a></li>
+						<li><strong>联系方式：</strong>13800000000</li>
+						<li><strong>主页：</strong><a href="http://www.jybkw.cn" target="_blank"
+								rel="noopener noreferrer">www.example.com</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			// 等待DOM加载完成后执行
+			document.addEventListener('DOMContentLoaded', function() {
+				const tabs = document.querySelectorAll('.tab');
+				const contents = document.querySelectorAll('.tab-content');
+
+				// 为每个标签添加点击事件监听器
+				tabs.forEach(tab => {
+					tab.addEventListener('click', () => {
+						const target = tab.getAttribute('data-tab');
+
+						// 移除所有标签的active类
+						tabs.forEach(t => t.classList.remove('active'));
+						// 为当前点击的标签添加active类
+						tab.classList.add('active');
+
+						// 隐藏所有内容，只显示当前选中的内容
+						contents.forEach(content => {
+							if (content.id === target) {
+								content.classList.add('active');
+							} else {
+								content.classList.remove('active');
+							}
+						});
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

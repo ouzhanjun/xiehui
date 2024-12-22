@@ -1,0 +1,93 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #060c21;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+}
+
+.resume-container {
+	max-width: 1200px;
+	margin: 30px auto;
+	padding: 20px;
+	box-shadow:
+		5px -5px 80px rgba(0, 255, 0, 0.5),
+		-5px 5px 80px rgba(0, 0, 255, 0.5);
+	transition: box-shadow 0.3s;
+	
+	min-height: 620px;
+	box-sizing: border-box;
+}
+
+.resume-container:hover {
+	box-shadow:
+		-10px -10px 80px rgba(0, 255, 0, 0.7),
+		10px 10px 80px rgba(0, 0, 255, 0.7);
+}
+
+.section-title {
+	color: #ffd700;
+	border-bottom: 2px dashed #ffd700;
+	padding-bottom: 10px;
+}
+
+.skills {
+	margin-bottom: 40px;
+	
+}
+
+.profile-section {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	justify-content: center;
+}
+
+.profile-picture {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin-right: 20px;
+	border: 1px solid #fff;
+	margin-right: 100px;
+}
+
+.personal-info {
+	line-height: 1.6;
+	width: 500px;
+	display: flex;
+	justify-content: space-between;max-height: 600px;
+	
+}
+
+.personal-info span {
+	color: #ffd700;
+	font-weight: bold;
+}
+
+.section-subtitle {
+	color: #ffd700;
+	margin-bottom: 10px;
+	text-align: center;
+	
+}
+
+.resume-sections {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	list-style-type: none;
+	padding: 0;
+}
+
+.resume-sections li {
+	margin: 0 10px;
+	color: #ffd700;
+}
+.resume-sections li:hover{
+	color: #00aaff;
+}
+.section-subtitle:hover{
+	color: #00aaff;
+}

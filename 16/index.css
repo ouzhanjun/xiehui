@@ -1,0 +1,206 @@
+		   *{
+		        margin: 0px;
+		        padding: 0px;
+		    }
+		    body{
+		        background: url(img/background.png) no-repeat fixed;
+		        background-size: 100%;
+				animation-name: sy;
+				animation-duration: 2s;
+				animation-delay: 0s;
+		    }
+		    .shouye{
+		        height: 600px;
+		        width: 1100px;
+		        background-color: #fff;
+		        margin: 0 auto;
+		        margin-top: 65px;
+		        border-radius: 15px;
+		        position: relative;
+		        z-index: 2; /* 确保 .shouye 在雪花下面 */
+				box-sizing: border-box;
+				box-shadow: 10px 10px 5px lightslategrey;
+
+		    }
+		    .left{
+				width: 202px;
+				height: 120px;
+				box-sizing: border-box;
+		        border-radius: 15px 0 0 0;
+		        border-right: antiquewhite solid 2px;
+				background: url(img/wusq.png) no-repeat;
+				}
+		    .bottom{
+		        height: 478px;
+		        width: 200px;
+		        background: url(img/dog.png);
+				background-color: #fff;
+		        border-radius: 0 0 0px 15px;
+		        border-top: solid antiquewhite 2px;
+		        border-right: antiquewhite solid 2px;
+				
+				}
+		    .touxiang{
+		        position: absolute; /* 设置图片为绝对定位 */
+		        top: 20%;
+		        left: 9%;
+		        transform: translate(-50%, -50%); /* 水平和垂直居中 */
+		        width: 80px;
+		        height: 80px;
+		        border-radius: 50%; /* 圆形图片 */
+		        background-image: url(img/touxiang.jpg);
+		        background-size: cover;
+		        z-index: 1; /* 确保图片在两个 div 的中间 */
+		        overflow: hidden;
+		        border: solid #fff 3px;
+				}
+			.caidan .zhuye{
+				color: pink;
+				background-color: rgb(255, 255, 255,0.8);
+			}
+		    .caidan{
+				z-index: 3;
+		        float: left;
+		        margin: auto;
+		        width: 100%;
+		        text-align: center;
+		        padding-top: 50px;
+				}
+		    .caidan div{
+		        height: 50px;
+		        line-height: 50PX;
+		        background-color: rgb(255, 255, 255,0.5);
+		        margin: 2px 0;
+				}
+		    .caidan div:hover{
+		        background-color: rgb(255, 255, 255,0.8);
+				}
+		    .caidan a{
+		        text-decoration: none;
+		        color: #fff;
+		        line-height: 50px;
+				animation-name: su;
+				animation-duration: 2s;
+				animation-delay: 0.9s;
+				animation-fill-mode: both;
+				text-shadow: 2px 2px 4px #000000;
+				}
+			.caidan a:hover{
+				color: pink;
+				font-size: 30px;
+				z-index: 3;
+				}
+		    .right{
+		        float: right;
+		        background: url(img/yatuoli1.png);
+				background-color: #fff;
+		        border-radius:0 15px 15px 0px;
+		        width: 900px;
+		        height: 600px;
+		        overflow: hidden;
+				}
+		    .caidan img{
+		        line-height: 3.125rem;
+		       vertical-align: middle;
+			   animation: dh 1s steps(6) infinite;
+			    width: 20px; /* 容器宽度 */
+			    height:20px; /* 容器高度 */\
+				position: absolute; /* 设置图片为绝对定位 */
+				}
+			.right h1{
+				padding: 145px 0 0 50px;
+				font-family: '微软雅黑';
+				/* font-style: oblique; */
+				letter-spacing: 20px;
+				color: #fff;
+				font-size: 70px;
+				text-shadow: -1px 1px 1px rgb(178,182,182);
+				}
+			.right h2{
+				text-decoration: underline;
+				padding: 0px 0px 0px 60px;
+				font-family: '宋体';
+				/* font-style: oblique; */
+				letter-spacing: 1px;
+				color: #fff;
+				text-shadow: -1px 1px 2px rgb(178,182,182);
+				}
+			.right h4{
+				padding: 0px 0px 0px 630px;
+				color: #fff;
+				font-family: "宋体";
+				font-size: 12px;
+				text-shadow: 2px 2px 3px #000;
+				letter-spacing: 1px;
+				}
+			.right h3{
+				padding: 0px 0px 0px 58px;
+				font-family: '宋体';
+				/* font-style: oblique; */
+				letter-spacing: 1px;
+				color: #fff;
+				text-shadow: -2px 1px 2px rgb(178,182,182);
+				}
+			.right p{
+				padding: 270px 0px 0 750px;
+				color: #fff;
+				font-size: 14px;
+				font-style: oblique;
+				text-shadow: 2px 2px 3px #000;
+				}	
+		    body, html {
+		        margin: 0;
+		        padding: 0;
+		        overflow: hidden; /* 隐藏滚动条 */
+		        height: 100%;
+		        background:; /* 设置背景颜色为深色，例如夜空 */
+		    }
+		    canvas {
+		        display: block; /* 使 canvas 元素填满整个页面 */
+		        z-index: 1; /* 设置雪花在 .shouye 之下 */
+		        position: absolute; /* 绝对定位 */
+		        top: 0;
+		        left: 0;
+		    }
+			
+			@keyframes sy{
+				
+				from{
+					position: relative;
+					margin: auto;
+					width: 0px;
+					height: 0px;
+				}
+				to{
+					position: relative;
+					margin: auto;
+					width: 1100px;
+					height: 685px;
+				}
+			}
+			
+			@keyframes su{
+				from{
+					font-size: 0px;
+				}
+				to{font-size: 16px;
+					
+				}
+			}
+			@keyframes lb{
+				0%{
+					background: url(img/abc.png);
+				}
+				50%{
+					background: url(img/wusq.png);
+				}
+				100%{
+					background: url(img/left1.jpg);
+				}
+			
+			
+			
+			}
+			
+				
+			

@@ -1,0 +1,319 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+body{
+    /* background-image: url('./img/evubc.jpeg');
+    background-size: cover;
+    background-repeat: no - repeat; */
+    
+     overflow: hidden;
+}
+.Left{
+    width: 300px;
+    height: 1000px;
+    /* background-color: rgb(58, 57, 57); */
+    background-image:url('./img/hao.jpg');
+    /* background-position: left center; */
+    /* border: solid 5px rgb(69, 26, 224); */
+    border: solid 5px black;
+    float: left;
+    position: relative;
+    z-index: 100;
+
+}
+.Left_Yuan{
+    width: 190px;
+    height: 190px;
+    background-color:white;
+    border-radius: 1000px;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: 100;
+    
+
+}
+.Left_Yuan img{
+    width: 180px;
+    border-radius: 1000px;
+    margin: 5px;
+    z-index: 100;
+
+}
+.Left_Nr{
+    color: white;
+    position: relative;
+    top: 100px;
+    right: 10px;
+    text-align: center;
+    line-height:65px;
+    z-index: 100;
+    font-weight: 500;
+}
+
+.Left_Nr li:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    /* border: solid 5px black; */
+}
+
+#zhangwo{
+    cursor: pointer;
+}
+#zhangwo:hover{
+    color: green;
+}
+/* Right */
+.Right{
+    width: 100%;
+    height: 1000px;
+    /* background-color: rgb(48, 19, 19); */
+    /* background-color:#686767; */
+    background-image:url('./img/885cee133d836dc.jpg');
+    /* background-position: center bottom; */
+    background-position: center bottom;
+    
+ 
+}
+/* .Right_top img{
+    width: 100%;
+    height: 500px;
+    opacity: 0.8;
+    position: absolute;
+} */
+.Right_top_box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 60px;
+    left: 15%;
+    /* color: #3d15cf; */
+    
+    font-size: 18px;
+    font-weight: 500;
+    background-image: linear-gradient(to right, red, blue);
+    /* -webkit-background-clip: text; */
+    /* background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    /* text-fill-color: transparent; */
+}
+.Right_top_box h3{
+    margin-bottom: 10px;
+    color: white;
+}
+.Right_top_box ul{
+    width: 300px;
+    line-height: 50px;
+    float: left;
+}
+.Right_bottom{
+    width: 100%;
+    height: 570px;
+    background-image:url('./img/hao.jpg');
+
+    /* background-color: rgb(20, 70, 145); */
+    /* background-color: rgba(59, 16, 161); */
+    position: relative;
+    top: 330px;
+    left: 300px;
+    color: white;
+    /* left: 15%; */
+}
+.Right_bottom_box h3{
+    width: 100px;
+    position: absolute;
+    left: 17%;
+    top: 120px;
+    color: wheat;
+}
+
+.Right_bottom_box img{
+  width: 60px;
+  margin-top: 20px;
+}
+#tu{
+    width: 80px;
+}
+.Right_bottom_box div:nth-child(2),.Right_bottom_box div:nth-child(3){
+    line-height: 35px;
+    position: relative;
+    top: 10px;
+    left: -55px;
+  }
+  .weix div:nth-child(2),.weix div:nth-child(3){
+    position: relative;
+    left: -80px;
+  }
+/* .Right_bottom_box div:nth-child(3){
+    position: relative;
+    left: -15px;
+
+} */
+.Right_bottom_box ul{
+    position: absolute;
+    left: 15%;
+    top: 200px;
+    text-align: center;
+    display: flex;
+    /* justify-content: space-around; */
+}
+.Right_bottom_box li{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.red{
+    color: #d14141;
+}
+.yuang{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    /* box-shadow: inset 5px 2px 4px  #666; */
+    box-shadow: 3px 3px 5px 2px black;
+    border-radius: 1000px;
+}
+
+.onclick{
+    /* color: #000; */
+    /* background-color: white; */
+
+}
+
+.Right_two{
+    width: 100%;
+    height: 930px;
+    background-image:url('./img/星空2.jpg');
+    background-position: center bottom;
+    /* background-color: rgb(15, 15, 15); */
+    text-align: center;
+    color: white;
+}
+.Right_two h1{
+    margin-bottom: 50px;
+    position: relative;
+    top: 20px;
+}
+.Right_two h3{
+    /* margin-bottom: 50px; */
+    position: relative;
+    top: 40px;
+}
+.Right_two_rbox{
+    width: 40%;
+    height: 800px;
+    /* background-color: black; */
+    margin-left:310px;
+    margin-top: 100px;
+    float: left;
+    position: absolute;
+}
+.Right_two_rboxY img{
+    width: 110px;
+    margin: 35px;
+}
+.Right_two_lbox{
+    width: 45%;
+    height: 300px;
+    line-height: 45px;
+    text-align: left;
+    margin-top: 125px;
+    float: right;
+}
+.Right_two_lbox p{
+   width: 808px;
+}
+
+.Right_san{
+    width: 100%;
+    height: 1000px;
+    /* background-color: rgb(23, 25, 73); */
+    background-image:url('./img/点点.jpg');
+    background-position: left bottom;
+    /* background-repeat: repeat-y;  */
+
+
+}
+.Right_san h3{
+    text-align: center;
+    color: white;
+    line-height: 50px;
+    position: relative;
+    top: 30px;
+}
+.Right_sanUl{
+    margin-top: 200px;
+    width: 1492px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.Right_sanUl_two{
+    margin-top: 200px;
+    width: 1492px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.Right_san ul{
+  
+    /* justify-content: space-evenly; */
+    /* overflow: auto; */
+    /* overflow: hidden; */
+}
+.Right_san img{
+    position: relative;
+    top: 105px;
+}
+#imgD{
+    position: relative;
+    top: 22px;
+}
+.Right_san li{
+    width: 300px;
+    height: 400px;
+    /* background-color: #fefefe; */
+    background-color: #CCC;
+    /* background-image:url('./img/'); */
+    /* background-position: left right; */
+
+    box-shadow:  1px 5px 3px 1px white;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 25px; 
+    /* margin-left: 80px; */
+    position: relative;
+}
+
+/*微调*/
+.kuai{
+    width: 100%;
+    background-color: rgb(254, 254, 254);
+    border-radius: 10px;
+    border-top-left-radius:0px;
+    border-top-right-radius:0px;
+    box-shadow: inset -2px 5px 5px rgb(219, 218, 216);
+    /* border-top: solid 1px black; */
+    text-align: left;
+    position: relative;
+    top: 90px;
+}
+#imgDk{
+    position: relative;
+    top: 16px
+}
+.kuai p{
+    margin-left: 3px;
+    color: #585858cc;
+}
+#Bold{
+    color: rgb(41, 41, 41);
+    font-size: 24px;
+    font-weight: 900px;
+    margin-bottom: 10px;
+}
+#yc{
+    display: none;
+}
+

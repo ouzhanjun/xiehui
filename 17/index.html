@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Personal Portfolio</title>
+    <style>
+        /* 为Right_sanUl中的li元素添加过渡效果*/
+       /* .Right_sanUl li {
+            transition: left 0.1s ease;
+            position: relative;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="Left">
+        <div class="Left_Yuan">
+            <img src="./img/wo.jpg" alt="">
+        </div>
+        <ul class="Left_Nr">
+            <li>个人资料</li>
+            <li>掌握的技能</li>
+            <li>旗下的网站</li>
+            <li>个人经历</li>
+            <li>我的团队</li>
+        </ul>
+    </div>
+    <div class="Right" style="display: block;">
+        <div class="Right_top">
+            <div class="Right_top_box">
+                <img src="img/xueShu-removebg-preview.png" alt="" style="position: absolute; left: 12%; top: -10px; width: 50px;">
+                <h3>个人资料</h3>
+                <ul>
+                    <li>姓名：苏子龙</li>
+                    <li>性别：男</li>
+                    <li>年龄：18</li>
+                    <li>英文名：Su_zilong</li>
+                </ul>
+                <ul>
+                    <li>QQ：30325673560</li>
+                    <li><span>QQ空间：</span><span class="red">我的空间</span></li>
+                    <li><span>主页：</span><span class="red">https://fanyi.baidu.com</span></li>
+                    <li><span>邮件：</span><span class="red">2926362383@qq.com</span></li>
+                </ul>
+                <ul>
+                    <p style="line-height: 35px; margin-left: 30px; width: 350px;">我是一个热爱钻研计算机技术的青少年，从很小开始对计算机有极大的兴趣。目前我专注网站开发领域。我还自己发起建立了一个制作游戏的团队，希望能和大家合作，一同创造出属于我们自己的作品。</p>
+                </ul>
+            </div>
+
+        </div>
+        <div class="Right_bottom">
+            <div class="Right_bottom_box">
+                <img src="img/xueShu-removebg-preview.png" alt="" style="position: absolute; left: 13%; top: 90px; width: 50px;">
+                <h3 id="zhangwo">掌握的技能</h3>
+                <ul>
+                    <li><div class="yuang"><img src="./img/图片1.png" alt=""></div><div>HTML5</div><div>熟悉HTML 5网站的架构和开发</div></li>
+                    <li><div class="yuang"><img src="./img/图片2.png" alt="" id="tu"></div><div>CSS3</div><div>熟悉CSS 与响应式网站 动画等</div></li>
+                    <li class="weix"><div class="yuang"><img src="./img/图片3.png" alt="" id="tu"></div><div>Vue.js</div><div>能使用 JS 制作简单的程序 交互与特效</div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="Right_two" style="display: none;">
+        <h1>专业技能</h1>
+        <hr color="#11,33,33" style="z-index: 100; width: 1200px; margin: auto;">
+        <h3>长年累月后,精进又向前。唯有勤学练,擅长最优先。</h3>
+        <div class="Right_two_rbox">
+            <div class="Right_two_rboxY">
+                <div class="RTbox">
+                    <img src="img/C_-removebg-preview.png" alt="">
+                    <img src="img/Java-removebg-preview.png" alt="">
+                </div>
+                <div>
+                    <img src="img/HTML-removebg-preview.png" alt="">
+                    <img src="img/ORACLE-removebg-preview.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="Right_two_lbox">
+            <p>1.  熟练使用java，基于ssh能快速搭建系统框架。</p>
+            <p>2.  熟练使用java，基于spring boot能快速搭建系统框架。</p>
+            <p>3.  熟练使用HTML/CSS技术，精通js/jquery编程,能够熟练使用angularjs，vue,reactjs等前端框架。</p>
+            <p>4.  熟悉oracle,mysql,sqlserver等各平台安装使用，熟练使用SQL语句增删改查，触发器，存储过程，索引，序列。</p>
+            <p>5.  熟练的使用grunt，gulp等前端工具。</p>
+            <p>6.  熟悉c#语言研发，基于asp.new mvc能快速搭建系统框架，新技术asp.net core做后台数据服务能快速搭建，跨平台使用。</p>
+            <p>7.  熟悉c#语言研发，基于winform的c/s应用程序能快速搭建框架。</p>
+        </div>
+    </div>
+    <div class="Right_two" style="display: none;">
+        <h1>专业技能</h1>
+        <hr color="#11,33,33" style="z-index: 100;">
+        <h3>长年累月后,精进又向前。唯有勤学练,擅长最优先。</h3>
+        <div class="Right_two_rbox">
+            <div class="Right_two_rboxY">
+                <div class="RTbox">
+                    <img src="img/C_-removebg-preview.png" alt="">
+                    <img src="img/Java-removebg-preview.png" alt="">
+                </div>
+                <div>
+                    <img src="img/HTML-removebg-preview.png" alt="">
+                    <img src="img/ORACLE-removebg-preview.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="Right_two_lbox">
+            <p>1.  熟练使用java，基于ssh能快速搭建系统框架。</p>
+            <p>2.  熟练使用java，基于spring boot能快速搭建系统框架。</p>
+            <p>3.  熟练使用HTML/CSS技术，精通js/jquery编程,能够熟练使用angularjs，vue,reactjs等前端框架。</p>
+            <p>4.  熟悉oracle,mysql,sqlserver等各平台安装使用，熟练使用SQL语句增删改查，触发器，存储过程，索引，序列。</p>
+            <p>5.  熟练的使用grunt，gulp等前端工具。</p>
+            <p>6.  熟悉c#语言研发，基于asp.new mvc能快速搭建系统框架，新技术asp.net core做后台数据服务能快速搭建，跨平台使用。</p>
+            <p>7.  熟悉c#语言研发，基于winform的c/s应用程序能快速搭建框架。</p>
+        </div>
+    </div>
+    <div class="Right_san" style="display: none;">
+        <h3>团员【Member of the group】</h3>
+        <img src="img/xueShu-removebg-preview.png" alt="" style="position: absolute; left: 48%; top: 30px; width: 50px;">
+        <ul class="Right_sanUl" id="Right_sanUl">
+            <li>
+                <img src="img/团员one-removebg-preview.png" alt="">
+                <div class="kuai">
+                    <p id="Bold">PrePre</p>
+                    <p>lt is lovely cat</p>
+                    <p>只为了更好遇见 才赋予了距离和时间 今天 值
+                        得等待</p>
+                </div>
+            </li>
+            <li>
+                <img src="img/团员two-removebg-preview.png" alt="">
+                <div class="kuai">
+                    <p id="Bold">黑煤球</p>
+                    <p>A group of lovely and inflated Fairies</p>
+                    <p>
+                        当你面对困惑时 它会告诉你 你就是你 最好的</p>
+                </div>
+            </li>
+            <li>
+                <img src="img/团员san-removebg-preview.png" alt="">
+                <div class="kuai">
+                    <p id="Bold">火星鼠</p>
+                    <p>A lovely mouse</p>
+                    <p>
+                        当你面对困惑时 它会告诉你 你就是你 最好的</p>
+                </div>
+            </li>
+            <li>
+                <img src="img/团员si-removebg-preview.png" alt="" id="imgD">
+                <div class="kuai" id="imgDk">
+                    <p id="Bold">PrePre</p>
+                    <p>My skateboard shoes</p>
+                    <p>只为了更好遇见 才赋予了距离和时间 今天 值
+                        得等待</p>
+                </div>
+            </li>
+        </ul>
+      
+    </div>
+   
+    <script>
+         var isColorChanging=false;
+        // 获取class为Left_Nr的元素
+        const leftNrUl = document.querySelector('.Left_Nr');
+        // 获取其内部所有的li元素
+        const liElements = leftNrUl.querySelectorAll('li');
+        document.getElementById('zhangwo').addEventListener('click',()=>{
+            isColorChanging = true;
+                    const leftDiv = document.querySelector('.Left');
+                    // 设置背景图
+                    leftDiv.style.backgroundImage = `url('./img/星空2.jpg')`;
+
+                    const rightDiv = document.querySelector('.Right');
+                    rightDiv.style.display = 'none';
+                    const rightsanDiv = document.querySelector('.Right_san');
+                    rightsanDiv.style.display = 'none';
+
+                    const rightTwoDiv = document.querySelector('.Right_two');
+                    rightTwoDiv.style.display = 'block';
+        })
+        // 循环遍历每个li元素添加点击事件
+        liElements.forEach(function (li) {
+            li.addEventListener('click', function () {
+                // 在这里可以根据点击的不同li元素做不同的逻辑处理
+                // 例如获取li元素的文本内容判断是哪个选项被点击了
+                const clickedText = this.textContent;
+                console.log(`你点击了：${clickedText}`);
+                // 点击“掌握的技能”显示Right_two隐藏Right
+                if (clickedText === "掌握的技能") {
+                    isColorChanging = true;
+                    const leftDiv = document.querySelector('.Left');
+                    // 设置背景图
+                    leftDiv.style.backgroundImage = `url('./img/星空2.jpg')`;
+
+                    const rightDiv = document.querySelector('.Right');
+                    rightDiv.style.display = 'none';
+                    const rightsanDiv = document.querySelector('.Right_san');
+                    rightsanDiv.style.display = 'none';
+
+                    const rightTwoDiv = document.querySelector('.Right_two');
+                    rightTwoDiv.style.display = 'block';
+                }
+                if (clickedText === "个人资料") {
+                    const leftYuan = document.querySelector('.Left_Yuan');
+                    leftYuan.style.background="white"
+                    const leftDiv = document.querySelector('.Left');
+                    // 设置背景图
+                    leftDiv.style.backgroundImage = `url('./img/hao.jpg')`;
+
+                    const rightDiv = document.querySelector('.Right');
+                    rightDiv.style.display = 'block';
+                    const rightTwoDiv = document.querySelector('.Right_two');
+                    rightTwoDiv.style.display = 'none';
+                    const rightsanDiv = document.querySelector('.Right_san');
+                    rightsanDiv.style.display = 'none';
+                     // 点击个人资料时，将控制变量设置为false，停止颜色变化
+                     isColorChanging = false;
+
+                }
+                if (clickedText === "旗下的网站") {
+                    alert("\"旗下的网站\"和\"个人经历\"  暂无写入")
+                }
+                if (clickedText === "个人经历") {
+                    alert("\"旗下的网站\"和\"个人经历\"  暂无写入")
+                }
+                if (clickedText === "我的团队") {
+                    isColorChanging = true;
+
+                    const leftDiv = document.querySelector('.Left');
+                    // 设置背景图
+                    leftDiv.style.backgroundImage = 'none';
+                    const rightDiv = document.querySelector('.Right');
+                    rightDiv.style.display = 'none';
+                    const rightTwoDiv = document.querySelector('.Right_two');
+                    rightTwoDiv.style.display = 'none';
+                    const rightsanDiv = document.querySelector('.Right_san');
+                    rightsanDiv.style.display = 'block';
+                }
+            });
+        });
+        //轮播
+        // 获取Right_sanUl这个ul元素
+        // const rightSanUl = document.querySelector('.Right_sanUl');
+        // 获取其内部所有的li元素
+        // const rightSanLi = rightSanUl.querySelectorAll('li');
+
+        // 记录当前移动到的li元素索引，初始化为最后一个li元素的索引
+        // let currentIndex = rightSanLi.length - 1;
+
+        // 设置一个定时器，每隔1秒执行一次移动函数（可根据实际效果调整时间间隔）
+        // setInterval(moveLiElements, 100);
+
+        // function moveLiElements() {
+        //     if (currentIndex >= 0) {
+        //         const liToMove = rightSanLi[currentIndex];
+        //         let currentLeft = window.getComputedStyle(liToMove).left;
+        //         if (currentLeft === 'auto') {
+        //             currentLeft = 0;
+        //         } else {
+        //             currentLeft = parseInt(currentLeft);
+        //         }
+
+        //         if (currentLeft === 800) {
+        //             rightSanLi[currentIndex].style.left = "-1200px";
+        //         } else {
+        //             // 更新left值，向右移动（这里向右移动的距离设为200px，可根据需求调整）
+        //             const newLeft = currentLeft + 200;
+        //             liToMove.style.left = newLeft + 'px';
+        //         }
+
+        //         currentIndex--;
+        //     } else {
+        //         currentIndex = rightSanLi.length - 1;
+        //     }
+        // }
+        
+
+        const leftYuan = document.querySelector('.Left_Yuan');
+       
+        // setInterval(changeGradientColor, 1000);
+         // 设置定时器时，根据控制变量来决定是否执行颜色变化函数
+         const colorChangeInterval = setInterval(function () {
+            if (isColorChanging) {
+                changeGradientColor();
+            }
+        }, 1000);
+        function changeGradientColor() {
+            // 生成两个随机的RGB颜色值，用于渐变的起止颜色
+            const startColor = generateRandomColor();
+            const endColor = generateRandomColor();
+            // 构建线性渐变的CSS样式字符串，这里以水平方向渐变为例（to right）
+            const gradient = `linear-gradient(to right, ${startColor}, ${endColor})`;
+            // 将生成的渐变样式设置为圆框元素的背景
+            leftYuan.style.background = gradient;
+        }
+
+        function generateRandomColor() {
+            const r = Math.floor(Math.random() * 256);
+            const g = Math.floor(Math.random() * 256);
+            const b = Math.floor(Math.random() * 256);
+            return `rgb(${r},${g},${b})`;
+        }
+        
+ 
+    </script>
+</body>
+
+</html>

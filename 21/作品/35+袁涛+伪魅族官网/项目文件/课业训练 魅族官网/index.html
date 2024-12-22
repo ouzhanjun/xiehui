@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" type="text/css" href="css/1.css"/>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="css/魅族.css"/>
+	<body>
+		
+		<div class="background">
+			
+			<div class="bgc">
+				
+				<!-- nav -->
+				<div class="nav">
+					<!-- logo -->
+					<div class="nav-logo"></div>
+					<!-- shopping car -->
+					<div class="car">
+						<a href="购物车页面.html">
+							<img src="img/4.png" width="30px"height="30px">
+							<em>0</em>
+							<div class="car-content">
+								<span></span>
+								<div class="car-icon"></div>
+								<div class="car-text"></div>
+									登录后可显示<br>
+									您账号中已加入的商品哦~
+							</div>
+						</a>
+						
+						
+					</div>
+					<!-- user -->
+					<div class="user">
+						<img src="img/3.png" width="30px"height="30px">
+						<div class="user-content">
+							<span></span>
+							<ul>
+								<li>立即登录</li>
+								<li>立即注册</li>
+								<li>我的订单</li>
+								<li>M码通道</li>
+							</ul>
+						</div>
+					</div>
+					<!-- 搜索 -->
+					<div class="search">
+						<input type="text" name="" placeholder="魅族20">
+						<i></i>
+					</div>
+				</div>
+				<div class="nav-mid">
+					<div class="nav-mid-name-1">手机</div>
+					<div class="sj-hover">
+						<ul>
+							<li>
+								<img src="img/100.jpg" >
+								<p>魅族 21<br>￥2999</p>
+							</li>
+							<li>
+							<img src="img/101.jpg" >
+								<p>魅族 21 PRO<br>￥3999</p>
+							</li>
+							<li>
+								<img src="img/100.jpg" >
+								<p>魅族 21 INFINITY 无界版<br>￥6299</p>
+							</li>					
+						</ul>
+					</div>
+				</div>
+				<div class="nav-mid">
+					<div class="nav-mid-name-2">PANDAER</div>
+					<div class="sj-hover-2">
+						<ul>
+							<li>
+								<img src="img/102.jpg" >
+								<p>夏日限定 妙磁抗菌壳<br>￥99</p>
+							</li>
+							<li>
+							<img src="img/103.jpg" >
+								<p>Air 真无线蓝牙耳机<br>￥149</p>
+							</li>
+							<li>
+								<img src="img/104.jpg" >
+								<p>PASA 超触感键帽<br>￥329</p>
+							</li>
+											
+						</ul>
+					</div>
+				</div>
+				<div class="nav-mid">
+					<div class="nav-mid-name-3">lipro</div>
+					<div class="sj-hover-3">
+						<ul>
+							<li>
+								<img src="img/11.jpeg" >
+								<p>学习护眼台灯<br>￥1799</p>
+							</li>
+							<li>
+								<img src="img/12.jpg" >
+								<p>智能吸顶灯<br>￥899</p>
+							</li>
+							<li>
+								<img src="img/13.jpg" >
+								<p>明装筒射灯 E 系列<br>￥169</p>
+							</li>
+							<li>
+								<img src="img/11.jpeg" >
+								<p>筒射灯 A 系列<br>￥79</p>
+							</li>
+							<li>
+							<img src="img/12.jpg" >
+								<p>筒射灯 E 系列<br>￥229</p>
+							</li>
+							<li>
+								<img src="img/13.jpg" >
+								<p>金属球泡<br>￥62</p>
+							</li>
+							<li>
+							<img src="img/11.jpeg" >
+								<p>地脚灯<br>￥89</p>
+							</li>
+							<li>
+								<img src="img/12.jpg" >
+								<p>智能蓝牙控制器<br>￥89</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav-mid">
+					<div class="nav-mid-name-4">配件</div>
+		
+				</div>
+				<div class="nav-mid">
+					<div class="nav-mid-name-5">Flyme</div>
+				</div>
+				<div class="nav-mid">
+					<div class="nav-mid-name-6">服务</div>
+				</div>
+				<div class="nav-mid">
+					<div class="nav-mid-name-7">社区</div>
+				</div>
+				<div class="nav-mid">
+					<div class="nav-mid-name-8">集团官网</div>
+				</div>
+				<div class="nav-mid">
+					<div class="nav-mid-name-9">APP下载</div>
+					<div class="sj-hover-9">
+						<img src="img/28.webp" height="100px">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mask-xu">
+			
+		</div>
+		<div id="mask">
+			<div class="center">
+				<!-- 图片 -->
+				<!-- 切换图片的本质就是控制图片的img属性来进行切换，所以我们使用v-bind的指令来控制图片的属性 -->
+				<img src="img/00.webp"v-show="num==1" alt="" >
+		          <img src="img/02.jpg"v-show="num==2" alt="">
+		          <img src="img/03.webp"v-show="num==3" alt="">
+				    <img src="img/04.webp"v-show="num==4" alt="">
+					  <img src="img/05.webp"v-show="num==5" alt="">
+				<!-- 左箭头 -->
+				<!-- 我们首先绑定一个点击事件，然后使用v--show指令来控制左箭头的显示和隐藏，也就是说当数组索引不等于0的时候就让它显示，否则就隐藏 -->
+				<!-- javascript:void(0)  防止页面刷新-->
+				<a href="javascript:void(0)" class="left" @click="show" v-show="num!=1" >
+					<img src="./img/prev.png" alt="">
+				</a>
+				<!-- 右箭头 -->
+				<!-- 我们首先绑定一个点击事件，然后使用v--show指令来控制左箭头的显示和隐藏，也就是说当数组索引小于数组长度的时候就让它显示，否则就隐藏-->
+				<a href="javascript:void(0)" class="right" @click="show2" v-show="num!=5">
+					<img src="./img/next.png" alt="" />
+				</a>
+			</div>
+		</div>
+	
+		<div class="fuwu">
+			<div class="fuwu-1">
+				<img src="img/06.webp" >
+				<p>魅族21</p>
+				<span>老用户回馈礼&nbsp;购新机抽魅族 21</span>
+			</div>
+			<div class="fuwu-2">
+				<img src="img/07.webp" >
+				<p>魅族双11就是值</p>
+				<span>旧机回收&nbsp;就来魅族商城</span>
+			</div>
+			<div class="fuwu-3">
+				<img src="img/08.webp" >
+				<p>魅族双11就是值</p>
+				<span>学生认证&nbsp;专享福利</span>
+			</div>
+			<div class="fuwu-3">
+				<img src="img/09.webp" >
+				<p>魅族双11就是值</p>
+				<span>领取新人福利</span>
+			</div>
+		</div>
+		
+		<div class="sj">
+			<h1>手机</h1>
+			<a href="商品详情.html">	<img src="img/05.webp" ></a>
+		
+		</div>
+		
+		<!-- 手机展示 -->
+		<div class="sj-tp">
+			
+			<div class="sj-tp1">
+				<span class="sj-12">12期</span>
+				<span class="sj-wz1">魅族&nbsp;20</span>
+				<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+				<span class="sj-wz3">
+					<i>￥2599起</i>
+					
+					<s>￥2799</s>
+				</span>
+				<img src="img/sj01.png" >
+			</div>
+		<div class="sj-tp1">
+			<span class="sj-12">12期</span>
+			<span class="sj-wz1">魅族&nbsp;20</span>
+			<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+			<span class="sj-wz3">
+				<i>￥2599起</i>
+				
+				<s>￥2799</s>
+			</span>
+			<img src="img/sj01.png" >
+		</div>
+		</div>
+		
+		
+		<div class="sj-tp-hz">
+		
+		<div class="sj-tp2">
+			<span class="sj-12">12期</span>
+			<span class="sj-wz1">魅族&nbsp;20</span>
+			<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+			<span class="sj-wz3">
+				<i>￥2599起</i>
+				
+				<s>￥2799</s>
+			</span>
+			<img src="img/sj01.png" >
+		</div>
+		<div class="sj-tp2">
+			<span class="sj-12">12期</span>
+			<span class="sj-wz1">魅族&nbsp;20</span>
+			<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+			<span class="sj-wz3">
+				<i>￥2599起</i>
+				
+				<s>￥2799</s>
+			</span>
+			<img src="img/sj01.png" >
+		</div>
+		
+		
+		<div class="sj-tp2">
+			<span class="sj-12">12期</span>
+			<span class="sj-wz1">魅族&nbsp;20</span>
+			<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+			<span class="sj-wz3">
+				<i>￥2599起</i>
+				
+				<s>￥2799</s>
+			</span>
+			<img src="img/sj01.png" >
+		</div>
+		<div class="sj-tp2">
+			
+			<span class="sj-12">12期</span>
+			<span class="sj-wz1">魅族&nbsp;20</span>
+			<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+			<span class="sj-wz3">
+				<i>￥2599起</i>
+				
+				<s>￥2799</s>
+			</span>
+			<img src="img/sj01.png" >
+		</div>
+		
+		
+		</div>
+		
+	<div class="sj">
+		<h1>PANDAER 奇趣探索</h1>
+		<img src="img/03.webp" >
+	</div>
+	<!-- 商品大部分 -->
+	<div class="tansuo">
+	<div class="cd">
+		<span class="cd-wz-1">35W GaN 小电瓶潮充</span>
+		<span class="cd-wz-2">迷你体积 | 新一代氮化镓材料 | -7°C卓越品质</span>
+		<p>￥89</p>
+	</div>
+	
+	<div class="ts-tp-hz">
+	<div class="ts-tp2">
+				<img src="img/11.jpeg" >
+		<span class="sj-wz1">魅族&nbsp;20</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	<div class="ts-tp2">
+				<img src="img/12.jpg" >
+		<span class="sj-wz1">魅族&nbsp;20</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	
+	
+	<div class="ts-tp2">
+				<img src="img/13.jpg" >
+		<span class="sj-wz1">魅族&nbsp;20</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	</div>
+	</div>
+	
+	<div class="tansuo">
+	<div class="cd">
+		<span class="cd-wz-1">35W GaN 小电瓶潮充</span>
+		<span class="cd-wz-2">迷你体积 | 新一代氮化镓材料 | -7°C卓越品质</span>
+		<p>￥89</p>
+	</div>
+	
+	<div class="ts-tp-hz">
+	<div class="ts-tp2">
+				<img src="img/11.jpeg" >
+		<span class="sj-wz1">魅族&nbsp;20</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	<div class="ts-tp2">
+				<img src="img/12.jpg" >
+		<span class="sj-wz1">魅族&nbsp;20</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	
+	
+	<div class="ts-tp2">
+				<img src="img/13.jpg" >
+		<span class="sj-wz1">魅族&nbsp;20</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	</div>
+	</div>
+	
+	<div class="tansuo">
+	<div class="cd">
+		<span class="cd-wz-1">35W GaN 小电瓶潮充</span>
+		<span class="cd-wz-2">迷你体积 | 新一代氮化镓材料 | -7°C卓越品质</span>
+		<p>￥89</p>
+	</div>
+	
+	<div class="ts-tp-hz">
+	<div class="ts-tp2">
+				<img src="img/11.jpeg" >
+		<span class="sj-wz1">魅族&nbsp;20</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	<div class="ts-tp2">
+				<img src="img/12.jpg" >
+		<span class="sj-wz1">魅族&nbsp;20</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	
+	
+	<div class="ts-tp2">
+				<img src="img/13.jpg" >
+		<span class="sj-wz1">魅族&nbsp;20</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	</div>
+	</div>
+	
+	
+	<div class="tansuo">
+	<div class="cd">
+		<span class="cd-wz-1">35W GaN 小电瓶潮充</span>
+		<span class="cd-wz-2">迷你体积 | 新一代氮化镓材料 | -7°C卓越品质</span>
+		<p>￥89</p>
+	</div>
+	
+	<div class="ts-tp-hz">
+	<div class="ts-tp2">
+				<img src="img/11.jpeg" >
+		<span class="sj-wz1">魅族&nbsp;20</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	<div class="ts-tp2">
+				<img src="img/12.jpg" >
+		<span class="sj-wz1">魅族&nbsp;20</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	
+	
+	<div class="ts-tp2">
+				<img src="img/13.jpg" >
+		<span class="sj-wz1">魅族&nbsp;20</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	</div>
+	</div>
+	
+	
+	<div class="tansuo">
+	<div class="cd">
+		<span class="cd-wz-1">35W GaN 小电瓶潮充</span>
+		<span class="cd-wz-2">迷你体积 | 新一代氮化镓材料 | -7°C卓越品质</span>
+		<p>￥89</p>
+	</div>
+	
+	<div class="ts-tp-hz">
+	<div class="ts-tp2">
+				<img src="img/11.jpeg" >
+		<span class="sj-wz1">魅族&nbsp;20</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	<div class="ts-tp2">
+				<img src="img/12.jpg" >
+		<span class="sj-wz1">魅族&nbsp;20</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	
+	
+	<div class="ts-tp2">
+				<img src="img/13.jpg" >
+		<span class="sj-wz1">魅族&nbsp;20</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	</div>
+	</div>
+	
+	
+	<div class="tansuo">
+	<div class="cd">
+		<span class="cd-wz-1">35W GaN 小电瓶潮充</span>
+		<span class="cd-wz-2">迷你体积 | 新一代氮化镓材料 | -7°C卓越品质</span>
+		<p>￥89</p>
+	</div>
+	
+	<div class="ts-tp-hz">
+	<div class="ts-tp2">
+				<img src="img/11.jpeg" >
+		<span class="sj-wz1">魅族&nbsp;20</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	<div class="ts-tp2">
+				<img src="img/12.jpg" >
+		<span class="sj-wz1">魅族&nbsp;20</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	
+	
+	<div class="ts-tp2">
+				<img src="img/13.jpg" >
+		<span class="sj-wz1">魅族&nbsp;20</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	</div>
+	</div>
+	
+	<div class="sj">
+		<h1>声学配件</h1>
+		<img src="img/14.webp" >
+	</div>
+	
+	<div class="tansuo">
+
+	
+	<div class="ts-tp-hz">
+		<div class="ts-tp2">
+					<img src="img/10.webp" >
+			<span class="sj-wz1" style="font-size: 20px;">XOG 零重力猫王妙播收音机</span>
+			<span class="sj-wz2" >经典声学｜开机即听｜多模连接｜智慧音频</span>
+			<span class="sj-wz3">
+				<i>￥2599起</i>
+				
+				<s>￥2799</s>
+			</span>
+		</div>
+	<div class="ts-tp2">
+				<img src="img/11.jpeg" >
+		<span class="sj-wz1" style="font-size: 20px;" >PANDAER Hi-Fi 解码耳放</span>
+		<span class="sj-wz2">Hi-Res 认证 | 独立 DAC 解码芯片</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	<div class="ts-tp2">
+				<img src="img/12.jpg" >
+		<span class="sj-wz1" style="font-size: 20px;">35dB 混合降噪 | 30h 超长续航</span>
+		<span class="sj-wz2">Flyme 妙连 | 环绕式立体声 | 游戏 & 音乐模式</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	
+	
+	<div class="ts-tp2">
+				<img src="img/13.jpg" >
+		<span class="sj-wz1" style="font-size: 20px;">PANDAER PASA 游戏耳机</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	</div>
+	</div>
+	
+	<div class="tansuo">
+	
+	
+	<div class="ts-tp-hz">
+		<div class="ts-tp2">
+					<img src="img/10.webp" >
+			<span class="sj-wz1" style="font-size: 20px;">XOG 零重力猫王妙播收音机</span>
+			<span class="sj-wz2" >经典声学｜开机即听｜多模连接｜智慧音频</span>
+			<span class="sj-wz3">
+				<i>￥2599起</i>
+				
+				<s>￥2799</s>
+			</span>
+		</div>
+	<div class="ts-tp2">
+				<img src="img/11.jpeg" >
+		<span class="sj-wz1" style="font-size: 20px;" >PANDAER Hi-Fi 解码耳放</span>
+		<span class="sj-wz2">Hi-Res 认证 | 独立 DAC 解码芯片</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	<div class="ts-tp2">
+				<img src="img/12.jpg" >
+		<span class="sj-wz1" style="font-size: 20px;">35dB 混合降噪 | 30h 超长续航</span>
+		<span class="sj-wz2">Flyme 妙连 | 环绕式立体声 | 游戏 & 音乐模式</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	
+	
+	<div class="ts-tp2">
+				<img src="img/13.jpg" >
+		<span class="sj-wz1" style="font-size: 20px;">PANDAER PASA 游戏耳机</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	</div>
+	</div>
+	
+	<div class="tansuo">
+	
+	
+	<div class="ts-tp-hz">
+		<div class="ts-tp2">
+					<img src="img/10.webp" >
+			<span class="sj-wz1" style="font-size: 20px;">XOG 零重力猫王妙播收音机</span>
+			<span class="sj-wz2" >经典声学｜开机即听｜多模连接｜智慧音频</span>
+			<span class="sj-wz3">
+				<i>￥2599起</i>
+				
+				<s>￥2799</s>
+			</span>
+		</div>
+	<div class="ts-tp2">
+				<img src="img/11.jpeg" >
+		<span class="sj-wz1" style="font-size: 20px;" >PANDAER Hi-Fi 解码耳放</span>
+		<span class="sj-wz2">Hi-Res 认证 | 独立 DAC 解码芯片</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	<div class="ts-tp2">
+				<img src="img/12.jpg" >
+		<span class="sj-wz1" style="font-size: 20px;">35dB 混合降噪 | 30h 超长续航</span>
+		<span class="sj-wz2">Flyme 妙连 | 环绕式立体声 | 游戏 & 音乐模式</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	
+	
+	<div class="ts-tp2">
+				<img src="img/13.jpg" >
+		<span class="sj-wz1" style="font-size: 20px;">PANDAER PASA 游戏耳机</span>
+		<span class="sj-wz2">第二代骁龙 8 旗舰处理器 | 全新 Flyme 10</span>
+		<span class="sj-wz3">
+			<i>￥2599起</i>
+			
+			<s>￥2799</s>
+		</span>
+	</div>
+	</div>
+	</div>
+	
+	<div class="sj">
+		<h1>lipro 智能家居</h1>
+		<img src="img/15.webp" >
+	</div>
+	
+	<!-- 灯 -->
+	<div class="jiaju">
+	
+	
+	<div class="ju-tp-hz">
+		<div class="ju-tp2">
+					<img src="img/16.jpg" >
+			<span class="sj-wz1" style="font-size: 16px;">学习护眼台灯</span>
+			<span class="sj-wz2" style="font-size: 14px; color: gray;" >国 AA 级照度 | 低重影技术</span>
+			<span class="sj-wz3"  style="font-size: 20px;" >
+				<i>￥1999</i>
+				
+			</span>
+		</div>
+	<div class="ju-tp2">
+				<img src="img/17.jpg" >
+		<span class="sj-wz1" style="font-size: 16px;">智能吸顶灯</span>
+			<span class="sj-wz2" style="font-size: 14px; color: gray;" >如然之光 护眼好光 | 2cm 超薄灯体</span>
+		<span class="sj-wz3"  style="font-size: 20px;" >
+			<i>￥999</i>
+		</span>
+	</div>
+	<div class="ju-tp2">
+				<img src="img/18.jpg" >
+	<span class="sj-wz1" style="font-size: 16px;">客厅智能吸顶灯</span>
+			<span class="sj-wz2" style="font-size: 14px; color: gray;" >3cm超薄灯体 | 全客厅护眼</span>
+	<span class="sj-wz3"  style="font-size: 20px;" >
+			<i>￥3299</i>
+		</span>
+	</div>
+	
+	
+	<div class="ju-tp2">
+				<img src="img/19.jpg" >
+	<span class="sj-wz1" style="font-size: 16px;">lipro 球泡</span>
+		<span class="sj-wz2" style="font-size: 14px; color: gray;" >Ra97 高显色| RG0 护眼低蓝光</span>
+	<span class="sj-wz3"  style="font-size: 20px;" >
+			<i>￥49</i>
+		</span>
+	</div>
+	</div>
+	</div>
+	
+	<div class="jiaju">
+	
+	
+	<div class="ju-tp-hz">
+		<div class="ju-tp2">
+					<img src="img/16.jpg" >
+			<span class="sj-wz1" style="font-size: 16px;">学习护眼台灯</span>
+			<span class="sj-wz2" style="font-size: 14px; color: gray;" >国 AA 级照度 | 低重影技术</span>
+			<span class="sj-wz3"  style="font-size: 20px;" >
+				<i>￥1999</i>
+				
+			</span>
+		</div>
+	<div class="ju-tp2">
+				<img src="img/17.jpg" >
+		<span class="sj-wz1" style="font-size: 16px;">智能吸顶灯</span>
+			<span class="sj-wz2" style="font-size: 14px; color: gray;" >如然之光 护眼好光 | 2cm 超薄灯体</span>
+		<span class="sj-wz3"  style="font-size: 20px;" >
+			<i>￥999</i>
+		</span>
+	</div>
+	<div class="ju-tp2">
+				<img src="img/18.jpg" >
+	<span class="sj-wz1" style="font-size: 16px;">客厅智能吸顶灯</span>
+			<span class="sj-wz2" style="font-size: 14px; color: gray;" >3cm超薄灯体 | 全客厅护眼</span>
+	<span class="sj-wz3"  style="font-size: 20px;" >
+			<i>￥3299</i>
+		</span>
+	</div>
+	
+	
+	<div class="ju-tp2">
+				<img src="img/19.jpg" >
+	<span class="sj-wz1" style="font-size: 16px;">lipro 球泡</span>
+		<span class="sj-wz2" style="font-size: 14px; color: gray;" >Ra97 高显色| RG0 护眼低蓝光</span>
+	<span class="sj-wz3"  style="font-size: 20px;" >
+			<i>￥49</i>
+		</span>
+	</div>
+	</div>
+	</div>
+
+	<div class="db">
+		<div class="db-left">
+			<div class="db-hang">
+				<span>推荐产品</span>
+				<p>魅族 20</p>
+				<p>魅族 20 PRO</p>
+				<p>全部手机</p>
+				<p>PANDAER</p>
+				<p>lipro</p>
+				<p>配件</p>
+			</div>
+			<div class="db-hang">
+				<span>推荐产品</span>
+				<p>魅族 20</p>
+				<p>魅族 20 PRO</p>
+				<p>全部手机</p>
+				<p>PANDAER</p>
+				<p>lipro</p>
+				<p>配件</p>
+			</div>
+			<div class="db-hang">
+				<span>推荐产品</span>
+				<p>魅族 20</p>
+				<p>魅族 20 PRO</p>
+				<p>全部手机</p>
+				<p>PANDAER</p>
+				<p>lipro</p>
+				<p>配件</p>
+			</div>
+			<div class="db-hang">
+				<span>推荐产品</span>
+				<p>魅族 20</p>
+				<p>魅族 20 PRO</p>
+				<p>全部手机</p>
+				<p>PANDAER</p>
+				<p>lipro</p>
+				<p>配件</p>
+			</div>
+			<div class="db-hang">
+				<span>推荐产品</span>
+				<p>魅族 20</p>
+				<p>魅族 20 PRO</p>
+				<p>全部手机</p>
+				<p>PANDAER</p>
+				<p>lipro</p>
+				<p>配件</p>
+			</div>
+		</div>
+		
+		<div class="db-right">
+			<p class="db-right-1">官方客服</p>
+			<p class="db-right-2">400-788-3333</p>
+			<p class="db-right-3">周一至周日&nbsp;8:00-24:00</p>
+			<p class="db-right-4">关注魅族</p>
+			<p class="db-right-5">
+				<img src="img/24.webp" >
+				<img src="img/25.webp" >
+				<img src="img/26.webp" >
+			</p>
+			<div class="kefu">
+				<div class="kefu-annu">
+					<img src="img/27.webp" >
+					<span>在线客服</span>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div class="wb">
+		<div class="wb-left">
+			<span>举报中心</span>
+		<span>举报中心</span>
+		<span>举报中心</span>
+		<span>举报中心</span>
+		<span>举报中心</span>
+		<span>举报中心</span>
+		<span>举报中心</span>
+		<span>举报中心</span>
+		</div>
+		<div class="wb-right">
+			<p>©21程序设计五年高技一班袁涛</p>
+		</div>
+		
+	</div>
+	<!-- 返回 -->
+	<input type="button" id="ceshi" value="丝滑返回顶部" onclick="back()" >
+	
+	</body>
+	<script type="text/javascript">
+		var app = new Vue({
+			el: "#mask",
+			//存储数据
+			data: {
+		      num:1
+			},
+			//调用方法
+			methods: {
+			   show:function(){
+			   	 this.num--;
+			   	 
+			   },
+			   show2:function(){
+			   	 this.num++;
+			   },
+			},
+		})
+	
+	</script>
+	
+	<script>
+	//这一步是为了防止，点击事件的过度发生。
+	var myTimer = -1;
+	
+	function back(){
+	    //1、获取当前滚动了多少距离
+	    //2、启动定时器，以一定时间减少响应的滚动距离
+	    var scrollTo = document.documentElement.scrollTop || document.body.scrollTop
+	    if(myTimer == -1){
+	        myTimer = setInterval(() => {
+	            scrollTo -= 60
+	            if(scrollTo<=0){
+	                scrollTo = 0
+	                window.clearInterval(myTimer)
+	                myTimer = -1
+	            }
+	            
+	            window.scrollTo(0,scrollTo) //这是值  是指离开网页顶部的距离   
+	        }, 10);
+	
+	    }
+	
+	}
+	
+	</script>
+</html>

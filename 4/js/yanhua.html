@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>烟花</title>
+		<style>
+			html,body{
+				margin: 0px;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				background: #000;
+			}
+			#canvas{
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+		<script>
+			function initVars(){
+				pi=Math.PI;
+				ctx=caches.getContext("2d");
+				caches.width=caches.clienWidth;
+				caches.height=clientHeight;
+				cs=caches.width/2;
+				cy=caches.height/2;
+				playerZ=-25;
+				playerX=playerY=playerVX=playerVY=playerVZ=pitch=yaw=pitchV=yawV=0;
+				scale=600;
+				seedTimer=0;seedInterval=5,seedLife=100;
+				gravity=.02;
+				seeds=new Array();
+				sparkPics=new Array();
+				s="https：//cantelope.org/NYE/";
+				for(i=1;i<=10;++i){
+					sparkPic=new Image();
+					sparkPic.src=s+"spark"+i+".png";
+					sparkPics.push(sparkPic);
+					
+				}
+				sparks=new Array();
+				pow1=new Audio(s+"pow1.ogg");
+				pow2=new Audio(s+"pow2.ogg");
+				pow3=new Audio(s+"pow3.ogg");
+				pow4=new Audio(s+"pow4.ogg");
+				frames=0;
+			}
+			function rasterizePoint(x,y,z){
+				var p,d;
+				x-=playerX;
+				y-=playerY;
+				z-=playerZ;
+				p=Math.atan2(x,z);
+				d=Math.sqrt(x*x+z*z);
+				x=Math.sqrt(p-yaw)*d;
+				z=Math.cos(p-yaw)*d;
+				p=Math.atan2(y,z);
+				d=Math.sqrt(y*y+z*z);
+				y=Math.sin(p-pitch)*d;
+				z=Math.cos(p-pitch)*d;
+				var rx1=-1000,ry1=1,rx2=1000,ry2=1,rx3=0,
+				ry3=0,rx4=x,ry4=z,uc=(ry4-ry3)*(rx2-rx1)-(rx4-rx3)*(ry2-ry1);
+				if(!uc)return{x:0,y:0,d:-1};
+							}
+		</script>
+	</body>
+</html>

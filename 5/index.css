@@ -1,0 +1,599 @@
+/* 全局样式设置 */
+/* 
+    设置整个页面的全局样式，包括字体、背景色、布局方式等。
+    - font-family: 设置字体，优先使用Roboto字体，如果加载失败则使用Noto Sans CJK SC字体。
+    - margin和padding: 去除默认的外边距和内边距。
+    - background: 设置页面背景颜色为浅灰色。
+    - display: flex 和 flex-direction: column: 使用Flexbox布局，子元素垂直排列。
+    - min-height: 100vh: 设置最小高度为视口高度，确保页脚在页面底部。
+*/
+body {
+    font-family: 'Roboto', 'Noto Sans CJK SC', sans-serif; /* 设置全局字体 */
+    margin: 0; /* 去除默认外边距 */
+    padding: 0; /* 去除默认内边距 */
+    background: #f4f4f4; /* 设置页面背景颜色为浅灰色 */
+    display: flex; /* 使用Flexbox布局 */
+    flex-direction: column; /* 子元素垂直排列 */
+    min-height: 100vh; /* 设置最小高度为视口高度 */
+}
+
+/* 容器样式 */
+/*
+    用于包裹主要内容区域的容器，设置宽度为页面宽度的80%，并水平居中。
+    - width: 80%: 设置容器宽度为页面宽度的80%。
+    - margin: auto: 自动设置左右外边距，实现水平居中。
+    - overflow: hidden: 隐藏溢出的内容，防止布局问题。
+*/
+.container {
+    width: 80%; /* 设置容器宽度为页面宽度的80% */
+    margin: auto; /* 自动设置左右外边距，实现水平居中 */
+    overflow: hidden; /* 隐藏溢出的内容 */
+}
+
+/* 头部样式 */
+/*
+    设置页面顶部的头部区域，包括背景色、文字颜色、内边距和对齐方式。
+    - background: #333: 设置头部背景颜色为深灰色。
+    - color: #fff: 设置头部文字颜色为白色。
+    - padding: 20px 0: 设置头部上下内边距为20px。
+    - text-align: center: 文字居中对齐。
+*/
+header {
+    background: #333; /* 设置头部背景颜色为深灰色 */
+    color: #fff; /* 设置头部文字颜色为白色 */
+    padding: 20px 0; /* 设置头部上下内边距为20px */
+    text-align: center; /* 文字居中对齐 */
+}
+
+header h1 {
+    margin: 0; /* 移除标题的默认外边距 */
+    font-size: 36px; /* 设置标题字体大小为36px */
+}
+
+/* 导航栏样式 */
+/*
+    设置导航栏的样式，包括背景色、文字颜色、内边距和对齐方式。
+    - background: #555: 设置导航栏背景颜色为灰色。
+    - color: #fff: 设置导航栏文字颜色为白色。
+    - padding: 10px 0: 设置导航栏上下内边距为10px。
+    - text-align: center: 文字居中对齐。
+*/
+nav {
+    background: #555; /* 设置导航栏背景颜色为灰色 */
+    color: #fff; /* 设置导航栏文字颜色为白色 */
+    padding: 10px 0; /* 设置导航栏上下内边距为10px */
+    text-align: center; /* 文字居中对齐 */
+}
+
+/* 导航链接样式 */
+/*
+    设置导航链接的样式，包括文字颜色、去除下划线、内边距、字体大小和过渡效果。
+    - color: #fff: 设置导航链接文字颜色为白色。
+    - text-decoration: none: 去除导航链接下划线。
+    - padding: 10px 15px: 设置导航链接内边距。
+    - display: inline-block: 将导航链接设置为块级元素。
+    - font-size: 16px: 设置导航链接字体大小为16px。
+    - transition: 添加背景和文字颜色的过渡效果。
+*/
+nav .nav-link {
+    color: #fff; /* 设置导航链接文字颜色为白色 */
+    text-decoration: none; /* 去除导航链接下划线 */
+    padding: 10px 15px; /* 设置导航链接内边距 */
+    display: inline-block; /* 将导航链接设置为块级元素 */
+    font-size: 16px; /* 设置导航链接字体大小为16px */
+    transition: background 0.3s, color 0.3s; /* 添加背景和文字颜色的过渡效果 */
+}
+
+/* 导航链接悬停样式 */
+/*
+    设置导航链接悬停时的样式，包括背景色和文字颜色变化。
+    - background: #444: 设置导航链接悬停时的背景颜色。
+    - color: #f0f0f0: 设置导航链接悬停时的文字颜色。
+*/
+nav .nav-link:hover {
+    background: #444; /* 设置导航链接悬停时的背景颜色 */
+    color: #f0f0f0; /* 设置导航链接悬停时的文字颜色 */
+}
+
+/* 主要内容区域样式 */
+/*
+    设置主要内容区域的样式，包括内边距、背景色、上外边距和对内容滚动的控制。
+    - padding: 20px: 设置主要内容区域的内边距。
+    - background: #fff: 设置主要内容区域的背景颜色为白色。
+    - margin-top: 20px: 设置主要内容区域的上外边距。
+    - overflow: auto: 允许主要内容区域内容滚动。
+*/
+.main-content {
+    padding: 20px; /* 设置主要内容区域的内边距 */
+    background: #fff; /* 设置主要内容区域的背景颜色为白色 */
+    margin-top: 20px; /* 设置主要内容区域的上外边距 */
+    overflow: auto; /* 允许主要内容区域内容滚动 */
+}
+
+/* 段落样式 */
+/*
+    设置段落文本的样式，包括字体大小和行高。
+    - font-size: 24px: 设置段落字体大小为24px。
+    - line-height: 1.6: 设置段落行高为1.6。
+*/
+p {
+    font-size: 24px; /* 设置段落字体大小为24px */
+    line-height: 1.6; /* 设置段落行高为1.6 */
+}
+
+/* 个人照片样式 */
+/*
+    设置个人照片的样式，包括尺寸、边框、背景色、浮动和过渡效果。
+    - width 和 height: 设置个人照片的尺寸。
+    - border-radius: 50%: 使个人照片成为圆形。
+    - object-fit: cover: 保持照片比例并裁剪超出部分。
+    - border: 设置照片边框。
+    - background: 设置照片默认背景色。
+    - float: left: 将照片浮动到右侧。
+    - margin: 设置照片的外边距。
+    - transition: 添加照片透明度的过渡效果。
+*/
+.profile-pic {
+    width: 150px; /* 设置个人照片宽度 */
+    height: 150px; /* 设置个人照片高度 */
+    border-radius: 50%; /* 使个人照片成为圆形 */
+    object-fit: cover; /* 保持照片比例并裁剪超出部分 */
+    border: 2px solid #fff; /* 设置个人照片边框为白色 */
+    background: #ccc; /* 设置个人照片默认背景颜色为浅灰色 */
+    float: left; /* 将个人照片浮动到右侧 */
+    margin: 0 0 20px 20px; /* 设置个人照片的外边距 */
+    transition: opacity 0.3s; /* 添加个人照片透明度的过渡效果 */
+}
+
+/* 个人照片悬停样式 */
+/*
+    设置个人照片悬停时的样式，包括透明度变化。
+    - opacity: 0.8: 设置照片悬停时的透明度。
+*/
+.profile-pic:hover {
+    opacity: 0.8; /* 设置个人照片悬停时的透明度 */
+}
+
+/* 项目列表样式 */
+/*
+    设置项目列表的样式，包括列表项符号、内边距、外边距、背景色、边框和圆角。
+    - list-style: none: 移除项目列表项符号。
+    - padding: 0: 移除项目列表内边距。
+    - margin: 0: 移除外边距。
+*/
+.projects-list {
+    list-style: none; /* 移除项目列表项符号 */
+    padding: 0; /* 移除项目列表内边距 */
+    margin: 0; /* 移除外边距 */
+}
+
+/* 项目列表项样式 */
+/*
+    设置项目列表项的样式，包括外边距、内边距、背景色、边框和圆角。
+    - margin-bottom: 20px: 设置项目列表项的下外边距。
+    - padding: 10px: 设置项目列表项的内边距。
+    - background: #f1f1f1: 设置项目列表项的背景颜色。
+    - border: 设置项目列表项的边框。
+    - border-radius: 5px: 设置项目列表项的圆角。
+    - transition: 添加项目列表项背景颜色的过渡效果。
+*/
+.projects-list li {
+    margin-bottom: 20px; /* 设置项目列表项的下外边距 */
+    padding: 10px; /* 设置项目列表项的内边距 */
+    background: #f1f1f1; /* 设置项目列表项的背景颜色 */
+    border: 1px solid #ddd; /* 设置项目列表项的边框 */
+    border-radius: 5px; /* 设置项目列表项的圆角 */
+    transition: background 0.3s; /* 添加项目列表项背景颜色的过渡效果 */
+}
+
+/* 项目标题样式 */
+/*
+    设置项目标题的样式，包括外边距和字体大小。
+    - margin-top: 0: 移除项目标题的默认上外边距。
+    - font-size: 24px: 设置项目标题字体大小为24px。
+*/
+.projects-list li h3 {
+    margin-top: 0; /* 移除项目标题的默认上外边距 */
+    font-size: 24px; /* 设置项目标题字体大小为24px */
+}
+
+/* 项目列表项悬停样式 */
+/*
+    设置项目列表项悬停时的样式，包括背景色变化。
+    - background: #e0e0e0: 设置项目列表项悬停时的背景颜色。
+*/
+.projects-list li:hover {
+    background: #e0e0e0; /* 设置项目列表项悬停时的背景颜色 */
+}
+
+/* 技能列表样式 */
+/*
+    设置技能列表的样式，包括列表项符号、内边距、对齐方式、布局方式、换行和间距。
+    - list-style: none: 移除技能列表项符号。
+    - padding: 0: 移除技能列表内边距。
+    - display: flex: 使用Flexbox布局。
+    - flex-wrap: wrap: 允许技能列表换行。
+    - gap: 20px: 设置技能列表项之间的间距。
+*/
+.skills-list {
+    list-style: none; /* 移除技能列表项符号 */
+    padding: 0; /* 移除技能列表内边距 */
+    display: flex; /* 使用Flexbox布局 */
+    flex-wrap: wrap; /* 允许技能列表换行 */
+    gap: 20px; /* 设置技能列表项之间的间距 */
+}
+
+/* 技能列表项样式 */
+/*
+    设置技能列表项的样式，包括对齐方式、背景色、内边距和圆角。
+    - display: flex: 使用Flexbox布局。
+    - align-items: center: 垂直居中对齐。
+    - background: #f1f1f1: 设置技能列表项的背景颜色。
+    - padding: 10px 15px: 设置技能列表项的内边距。
+    - border-radius: 5px: 设置技能列表项的圆角。
+    - transition: 添加技能列表项背景颜色的过渡效果。
+*/
+.skills-list li {
+    display: flex; /* 使用Flexbox布局 */
+    align-items: center; /* 垂直居中对齐 */
+    background: #f1f1f1; /* 设置技能列表项的背景颜色 */
+    padding: 10px 15px; /* 设置技能列表项的内边距 */
+    border-radius: 5px; /* 设置技能列表项的圆角 */
+    transition: background 0.3s; /* 添加技能列表项背景颜色的过渡效果 */
+}
+
+/* 技能列表样式 */
+/*
+    设置技能列表的整体样式：
+    - list-style: none: 移除默认的列表项符号（如圆点）。
+    - padding: 0: 移除列表的内边距。
+    - display: flex: 使用Flexbox布局，使技能列表项水平排列。
+    - flex-wrap: wrap: 允许技能列表项换行，以适应不同屏幕宽度。
+    - gap: 20px: 设置技能列表项之间的间距为20px。
+*/
+.skills-list {
+    list-style: none; /* 移除技能列表项符号 */
+    padding: 0; /* 移除技能列表内边距 */
+    display: flex; /* 使用Flexbox布局，使技能列表项水平排列 */
+    flex-wrap: wrap; /* 允许技能列表项换行，以适应不同屏幕宽度 */
+    gap: 20px; /* 设置技能列表项之间的间距为20px */
+}
+
+/* 技能列表项样式 */
+/*
+    设置每个技能列表项的样式：
+    - display: flex: 使用Flexbox布局，使图标和文字水平排列。
+    - align-items: center: 垂直居中对齐图标和文字。
+    - background: #f1f1f1: 设置列表项的背景颜色为浅灰色。
+    - padding: 10px 15px: 设置列表项的内边距为上下10px，左右15px。
+    - border-radius: 5px: 设置列表项的圆角半径为5px，使边角圆润。
+    - transition: background 0.3s: 添加背景颜色的过渡效果，当鼠标悬停时背景颜色变化更平滑。
+*/
+.skills-list li {
+    display: flex; /* 使用Flexbox布局，使图标和文字水平排列 */
+    align-items: center; /* 垂直居中对齐图标和文字 */
+    background: #f1f1f1; /* 设置列表项的背景颜色为浅灰色 */
+    padding: 10px 15px; /* 设置列表项的内边距为上下10px，左右15px */
+    border-radius: 5px; /* 设置列表项的圆角半径为5px，使边角圆润 */
+    transition: background 0.3s; /* 添加背景颜色的过渡效果，当鼠标悬停时背景颜色变化更平滑 */
+}
+
+/* 技能图标样式 */
+/*
+    设置技能图标的样式：
+    - width 和 height: 设置图标的宽度和高度为32px。
+    - margin-right: 15px: 设置图标与文字之间的间距为15px。
+*/
+.skills-list li img {
+    width: 32px; /* 设置技能图标宽度为32px */
+    height: 32px; /* 设置技能图标高度为32px */
+    margin-right: 15px; /* 设置技能图标与文字之间的间距为15px */
+}
+
+/* 技能列表项悬停样式 */
+/*
+    设置技能列表项在鼠标悬停时的样式：
+    - background: #e0e0e0: 当鼠标悬停在列表项上时，背景颜色变为更浅的灰色。
+*/
+.skills-list li:hover {
+    background: #e0e0e0; /* 设置技能列表项悬停时的背景颜色为更浅的灰色 */
+}
+
+/* 教育背景列表样式 */
+/*
+    设置教育背景列表的整体样式：
+    - list-style: none: 移除默认的列表项符号。
+    - padding: 0: 移除列表的内边距。
+    - margin: 0: 移除外边距。
+*/
+.education-list {
+    list-style: none; /* 移除教育背景列表项符号 */
+    padding: 0; /* 移除教育背景列表内边距 */
+    margin: 0; /* 移除外边距 */
+}
+
+/* 教育背景列表项样式 */
+/*
+    设置每个教育背景列表项的样式：
+    - margin-bottom: 20px: 设置列表项的下外边距为20px。
+    - padding: 10px: 设置列表项的内边距为10px。
+    - background: #f1f1f1: 设置列表项的背景颜色为浅灰色。
+    - border-radius: 5px: 设置列表项的圆角半径为5px。
+    - transition: background 0.3s: 添加背景颜色的过渡效果。
+*/
+.education-list li {
+    margin-bottom: 20px; /* 设置教育背景列表项的下外边距为20px */
+    padding: 10px; /* 设置教育背景列表项的内边距为10px */
+    background: #f1f1f1; /* 设置教育背景列表项的背景颜色为浅灰色 */
+    border-radius: 5px; /* 设置教育背景列表项的圆角半径为5px */
+    transition: background 0.3s; /* 添加教育背景列表项背景颜色的过渡效果 */
+}
+
+/* 教育背景标题样式 */
+/*
+    设置教育背景标题的样式：
+    - margin-top: 0: 移除标题的默认上外边距。
+    - font-size: 24px: 设置标题字体大小为24px。
+*/
+.education-list li h3 {
+    margin-top: 0; /* 移除教育背景标题的默认上外边距 */
+    font-size: 24px; /* 设置教育背景标题字体大小为24px */
+}
+
+/* 教育背景列表项悬停样式 */
+/*
+    设置教育背景列表项在鼠标悬停时的样式：
+    - background: #e0e0e0: 当鼠标悬停在列表项上时，背景颜色变为更浅的灰色。
+*/
+.education-list li:hover {
+    background: #e0e0e0; /* 设置教育背景列表项悬停时的背景颜色为更浅的灰色 */
+}
+
+/* 兴趣爱好列表样式 */
+/*
+    设置兴趣爱好列表的整体样式：
+    - list-style: none: 移除默认的列表项符号。
+    - padding: 0: 移除列表的内边距。
+    - margin: 0: 移除外边距。
+    - display: flex: 使用Flexbox布局，使兴趣爱好列表项水平排列。
+    - flex-wrap: wrap: 允许兴趣爱好列表项换行。
+    - gap: 10px: 设置兴趣爱好列表项之间的间距为10px。
+*/
+.hobbies-list {
+    list-style: none; /* 移除兴趣爱好列表项符号 */
+    padding: 0; /* 移除兴趣爱好列表内边距 */
+    margin: 0; /* 移除外边距 */
+    display: flex; /* 使用Flexbox布局，使兴趣爱好列表项水平排列 */
+    flex-wrap: wrap; /* 允许兴趣爱好列表项换行 */
+    gap: 10px; /* 设置兴趣爱好列表项之间的间距为10px */
+}
+
+/* 兴趣爱好列表项样式 */
+/*
+    设置每个兴趣爱好列表项的样式：
+    - background: #f1f1f1: 设置列表项的背景颜色为浅灰色。
+    - padding: 10px 15px: 设置列表项的内边距为上下10px，左右15px。
+    - border-radius: 5px: 设置列表项的圆角半径为5px，使边角圆润。
+    - transition: background 0.3s: 添加背景颜色的过渡效果，当鼠标悬停时背景颜色变化更平滑。
+*/
+.hobbies-list li {
+    background: #f1f1f1; /* 设置兴趣爱好列表项的背景颜色为浅灰色 */
+    padding: 10px 15px; /* 设置兴趣爱好列表项的内边距为上下10px，左右15px */
+    border-radius: 5px; /* 设置兴趣爱好列表项的圆角半径为5px，使边角圆润 */
+    transition: background 0.3s; /* 添加背景颜色的过渡效果，当鼠标悬停时背景颜色变化更平滑 */
+}
+
+/* 兴趣爱好列表项悬停样式 */
+/*
+    设置兴趣爱好列表项在鼠标悬停时的样式：
+    - background: #e0e0e0: 当鼠标悬停在列表项上时，背景颜色变为更浅的灰色。
+*/
+.hobbies-list li:hover {
+    background: #e0e0e0; /* 设置兴趣爱好列表项悬停时的背景颜色为更浅的灰色 */
+}
+
+/* 奖项与荣誉列表样式 */
+/*
+    设置奖项与荣誉列表的整体样式：
+    - list-style: none: 移除默认的列表项符号。
+    - padding: 0: 移除列表的内边距。
+    - margin: 0: 移除外边距。
+*/
+.awards-list {
+    list-style: none; /* 移除奖项与荣誉列表项符号 */
+    padding: 0; /* 移除奖项与荣誉列表内边距 */
+    margin: 0; /* 移除外边距 */
+}
+
+/* 奖项与荣誉列表项样式 */
+/*
+    设置每个奖项与荣誉列表项的样式：
+    - margin-bottom: 20px: 设置列表项的下外边距为20px。
+    - padding: 10px: 设置列表项的内边距为10px。
+    - background: #f1f1f1: 设置列表项的背景颜色为浅灰色。
+    - border-radius: 5px: 设置列表项的圆角半径为5px，使边角圆润。
+    - transition: background 0.3s: 添加背景颜色的过渡效果。
+*/
+.awards-list li {
+    margin-bottom: 20px; /* 设置奖项与荣誉列表项的下外边距为20px */
+    padding: 10px; /* 设置奖项与荣誉列表项的内边距为10px */
+    background: #f1f1f1; /* 设置奖项与荣誉列表项的背景颜色为浅灰色 */
+    border-radius: 5px; /* 设置奖项与荣誉列表项的圆角半径为5px，使边角圆润 */
+    transition: background 0.3s; /* 添加奖项与荣誉列表项背景颜色的过渡效果 */
+}
+
+/* 奖项与荣誉标题样式 */
+/*
+    设置奖项与荣誉标题的样式：
+    - margin-top: 0: 移除标题的默认上外边距。
+    - font-size: 24px: 设置标题字体大小为24px。
+*/
+.awards-list li h3 {
+    margin-top: 0; /* 移除奖项与荣誉标题的默认上外边距 */
+    font-size: 24px; /* 设置奖项与荣誉标题字体大小为24px */
+}
+
+/* 奖项与荣誉列表项悬停样式 */
+/*
+    设置奖项与荣誉列表项在鼠标悬停时的样式：
+    - background: #e0e0e0: 当鼠标悬停在列表项上时，背景颜色变为更浅的灰色。
+*/
+.awards-list li:hover {
+    background: #e0e0e0; /* 设置奖项与荣誉列表项悬停时的背景颜色为更浅的灰色 */
+}
+
+/* 联系方式列表样式 */
+/*
+    设置联系方式列表的整体样式：
+    - list-style: none: 移除默认的列表项符号。
+    - padding: 0: 移除列表的内边距。
+    - font-size: 24px: 设置联系方式列表字体大小为24px。
+*/
+.contact-list {
+    list-style: none; /* 移除联系方式列表项符号 */
+    padding: 0; /* 移除联系方式列表内边距 */
+    font-size: 24px; /* 设置联系方式列表字体大小为24px */
+}
+
+/* 联系方式列表项样式 */
+/*
+    设置联系方式列表项的下外边距：
+    - margin-bottom: 10px: 设置每个联系方式列表项之间的下外边距为10px。
+*/
+.contact-list li {
+    margin-bottom: 10px; /* 设置联系方式列表项的下外边距 */
+}
+
+/* 联系方式列表项中的强标签样式 */
+/*
+    设置联系方式列表项中的<strong>标签的样式：
+    - display: inline-block: 将<strong>标签设置为块级元素，使其可以设置宽度。
+    - width: 80px: 设置<strong>标签的宽度为80px，用于对齐联系方式文本。
+*/
+.contact-list li strong {
+    display: inline-block; /* 设置联系方式列表项为块级元素，使其可以设置宽度 */
+    width: 80px; /* 设置联系方式列表项的宽度为80px */
+}
+
+/* 联系表单样式 */
+/*
+    设置联系表单的整体样式：
+    - background: #f1f1f1: 设置联系表单的背景颜色为浅灰色。
+    - padding: 20px: 设置联系表单的内边距为20px。
+    - border-radius: 5px: 设置联系表单的圆角半径为5px，使边角圆润。
+    - margin-top: 20px: 设置联系表单的上外边距为20px，与其他内容保持一定距离。
+*/
+.contact-form {
+    background: #f1f1f1; /* 设置联系表单的背景颜色为浅灰色 */
+    padding: 20px; /* 设置联系表单的内边距为20px */
+    border-radius: 5px; /* 设置联系表单的圆角半径为5px，使边角圆润 */
+    margin-top: 20px; /* 设置联系表单的上外边距为20px，与其他内容保持一定距离 */
+}
+
+/* 联系表单标题样式 */
+/*
+    设置联系表单标题的样式：
+    - margin-top: 0: 移除标题的默认上外边距。
+    - font-size: 24px: 设置标题字体大小为24px。
+*/
+.contact-form h3 {
+    margin-top: 0; /* 移除联系表单标题的默认上外边距 */
+    font-size: 24px; /* 设置联系表单标题字体大小为24px */
+}
+
+/* 联系表单表单容器样式 */
+/*
+    设置联系表单表单容器的布局：
+    - display: flex: 使用Flexbox布局。
+    - flex-direction: column: 子元素垂直排列。
+*/
+.contact-form form {
+    display: flex; /* 使用Flexbox布局 */
+    flex-direction: column; /* 子元素垂直排列 */
+}
+
+/* 联系表单标签样式 */
+/*
+    设置联系表单标签的样式：
+    - margin-bottom: 5px: 设置标签的下外边距为5px。
+    - font-size: 20px: 设置标签字体大小为20px。
+*/
+.contact-form label {
+    margin-bottom: 5px; /* 设置联系表单标签的下外边距为5px */
+    font-size: 20px; /* 设置联系表单标签字体大小为20px */
+}
+
+/* 联系表单输入框和文本区域样式 */
+/*
+    设置联系表单输入框和文本区域的样式：
+    - padding: 10px: 设置内边距为10px。
+    - font-size: 16px: 设置字体大小为16px。
+    - border: 2px solid #ccc: 设置边框为2px的实线，颜色为浅灰色。
+    - border-radius: 5px: 设置圆角半径为5px，使边角圆润。
+    - margin-bottom: 10px: 设置下外边距为10px。
+*/
+.contact-form input, .contact-form textarea {
+    padding: 10px; /* 设置联系表单输入框和文本区域的内边距为10px */
+    font-size: 16px; /* 设置联系表单输入框和文本区域的字体大小为16px */
+    border: 2px solid #ccc; /* 设置联系表单输入框和文本区域的边框为2px的实线，颜色为浅灰色 */
+    border-radius: 5px; /* 设置联系表单输入框和文本区域的圆角半径为5px，使边角圆润 */
+    margin-bottom: 10px; /* 设置联系表单输入框和文本区域的下外边距为10px */
+}
+
+/* 联系表单输入框和文本区域聚焦时的样式 */
+/*
+    设置联系表单输入框和文本区域在聚焦时的样式：
+    - border-color: #333: 当输入框或文本区域获得焦点时，边框颜色变为深灰色。
+*/
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #333; /* 设置联系表单输入框和文本区域聚焦时的边框颜色为深灰色 */
+}
+
+/* 联系表单按钮样式 */
+/*
+    设置联系表单按钮的样式：
+    - padding: 10px: 设置按钮的内边距为10px。
+    - font-size: 16px: 设置按钮字体大小为16px。
+    - background: #333: 设置按钮的背景颜色为深灰色。
+    - color: #fff: 设置按钮的文字颜色为白色。
+    - border: none: 移除按钮的边框。
+    - border-radius: 5px: 设置按钮的圆角半径为5px，使边角圆润。
+    - cursor: pointer: 设置鼠标指针样式为指针，表示这是一个可点击的按钮。
+    - transition: 添加按钮背景和文字颜色的过渡效果。
+*/
+.contact-form button {
+    padding: 10px; /* 设置联系表单按钮的内边距为10px */
+    font-size: 16px; /* 设置联系表单按钮的字体大小为16px */
+    background: #333; /* 设置联系表单按钮的背景颜色为深灰色 */
+    color: #fff; /* 设置联系表单按钮的文字颜色为白色 */
+    border: none; /* 移除联系表单按钮的边框 */
+    border-radius: 5px; /* 设置联系表单按钮的圆角半径为5px，使边角圆润 */
+    cursor: pointer; /* 设置联系表单按钮的鼠标指针样式为指针 */
+    transition: background 0.3s, color 0.3s; /* 添加联系表单按钮背景和文字颜色的过渡效果 */
+}
+
+/* 联系表单按钮悬停样式 */
+/*
+    设置联系表单按钮在悬停时的样式：
+    - background: #555: 当鼠标悬停在按钮上时，按钮背景颜色变为更深的灰色。
+    - color: #f0f0f0: 当鼠标悬停在按钮上时，按钮文字颜色变为浅灰色。
+*/
+.contact-form button:hover {
+    background: #555; /* 设置联系表单按钮悬停时的背景颜色为更深的灰色 */
+    color: #f0f0f0; /* 设置联系表单按钮悬停时的文字颜色为浅灰色 */
+}
+
+/* 页脚样式 */
+/*
+    设置页脚的整体样式：
+    - background: #333: 设置页脚的背景颜色为深灰色。
+    - color: #fff: 设置页脚文字的颜色为白色，以确保与深色背景形成对比。
+    - text-align: center: 将页脚内的文字内容居中对齐。
+    - padding: 10px 0: 设置页脚内容的上下内边距为10px，左右内边距为0。
+*/
+footer {
+    background: #333; /* 设置页脚的背景颜色为深灰色 */
+    color: #fff; /* 设置页脚文字的颜色为白色 */
+    text-align: center; /* 将页脚内的文字内容居中对齐 */
+    padding: 10px 0; /* 设置页脚内容的上下内边距为10px，左右内边距为0 */
+}

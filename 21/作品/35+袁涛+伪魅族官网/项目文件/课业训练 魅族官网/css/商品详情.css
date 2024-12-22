@@ -1,0 +1,131 @@
+*{
+	padding: 0;
+	margin: 0;
+	
+}
+a{
+	color: #000000;
+}
+.gd-tp{
+	 position: fixed;
+	        top: 0px;
+                left: 100px;
+				z-index: -1000;  
+}
+.shangping{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.shangping-xinxi{
+	    border-radius: 24px;
+	padding: 32px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	margin-top: 8%;
+	margin-left: 45%;
+}
+	
+.shangping-xuanxiang{
+	margin-top: 5%;
+}
+.shangping-banben p{
+	width: 50%;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid black;
+	border-radius: 50px;
+	margin-top: 20px;
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.shangping-banben img{
+	margin-right: 20px;
+}
+.shangping-shuliang{
+	margin-top: 5%;
+	margin-left: 14%;
+	
+}
+.shuliang-annu{
+	width: 30px;
+	margin-top: 10px;margin-bottom: 20px;
+}
+.shangping-goumai{
+	width: 230px;
+	border-radius: 24px;
+	height: 35px;
+	
+	background-color: white;
+}
+
+
+.shangping-xinxi h4{
+	font-size: 30px;
+}
+.xinxi-wz-1{
+	color: rgb(224, 61, 61);
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.shangping-jiage{
+	margin-top: 20px;
+	width: 530px;
+	height: 180px;
+	background: url(../img/30.png);
+	background-size: 100% 100%;
+	  color: white;
+}
+.xinxi-wz-2{
+	margin-top: 20px;
+	margin-left: 30px;
+	  color: #5F31CC;
+	  border-radius: 30px;
+	  width: 150px;
+	  height: 50px;
+	  background-color: white;
+	  text-align: center;
+	  line-height: 50px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  }
+.xinxi-wz-2 span{
+	font-size: 28px;
+}
+.xinxi-wz-3{
+	line-height: 60px;
+	margin-left: 40px;
+}
+.xinxi-wz-4{
+	line-height: 30px;
+	margin-left: 40px;
+}
+.cs{
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  height: 80px;
+
+  
+}
+.shangping-tp-db img{
+display: flex;
+justify-content: center;
+width: 100%;
+	
+}
+.shangping-tp-db {
+
+	width: 90%;
+	margin: 0 auto;
+}

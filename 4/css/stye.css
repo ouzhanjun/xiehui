@@ -1,0 +1,276 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #f2815580;
+}
+
+.home{
+	width: 1400px;
+	margin: auto;
+
+}
+.logo h1{
+	font-size: 50px;
+	color: #fff;
+	margin-top: 5vh;
+	margin-left: 2%;
+}
+.homecon{
+	display: flex;
+
+	justify-content: space-between;
+	margin-top: 5vh;
+	margin-bottom:9vh;
+}
+.hcnav{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+	width: 170px;
+	height: 605px;
+	background: #fff;
+	border-radius: 0.625rem;
+	margin-left: 2%;
+	padding: 40px 25px;
+	box-sizing: border-box;
+}
+.hcnav a{
+	display: flex;
+justify-content: center;
+	flex-wrap: wrap;
+	color: #fff;
+	text-decoration: none;
+align-content: center;
+	width: 120px;
+	height: 100px;
+	background: #f2815580;
+	border-radius: 0.625rem;
+}
+.hcnav a:hover{
+	background: #f2b155;
+}
+.hcnav a span{
+	display: block;
+	text-align: center;
+	margin-top: 0.625rem;
+}
+.hcnav a img{
+	width: 60px;
+	height: 60px;
+}
+.hctext{
+	align-items: center;
+	display: flex;
+	width: 1137px;
+	height: 605px;
+	background: #fff;
+	box-sizing: border-box;
+		border-radius: 0.625rem;
+margin-right: 2%;
+
+}
+
+.hctext img{
+	width: 420px;
+	height: 515px;
+	margin-left: 2%;
+	border-radius: 0.625rem;
+}
+.hctexetcon{
+	margin-left: 45px;
+}
+.hctexetcon h3{
+font-weight: normal;
+font-size: 26px;
+}
+.hctexetcon p{
+	color: #555555;
+	margin-top: 20px;
+	line-height: 1.8;
+	
+}
+	
+.footer p{
+	text-align:center;
+	font-size: 16px;
+	color: #fff;
+}
+.header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 16px 0;
+	background: #ffffff75;
+	width: 106%;
+
+}
+.logo{
+	color: #f2b155;
+	font-weight: 400;
+	font-size: 36px;
+}
+.nav a{
+	display: inline-block;
+	min-width: 80px;
+	text-align: center;
+
+	color: #555555;
+	text-decoration: none;
+	margin-left: 81px;
+	font-size: 0.9375rem;
+}
+.nav a:hover{
+	color: #000;
+	font-weight: 600;
+}
+.nav .active{
+	color: #000;
+	font-weight: 600;
+}
+.about{
+	width: 1230px;
+	background: rgba(255, 255, 255, 0.3);
+	padding: 45px 39px 45px 39px;
+	border-radius: 10px;
+	margin-top: 95px;
+	margin: 95px auto 0 auto;
+}
+.about-title{
+	font-weight: 400;
+	color: #333;
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+.about-info-box{
+	display: flex;
+	justify-content: space-between;
+}
+.aib-text h3{
+	font-size: 16px;
+	color: #000;
+	margin-bottom: 10px;
+}
+.aib-text p{
+	color: #555555;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.8;
+}
+.aib-img img{
+	width: 355px;
+	height: 169px;
+	margin-left: 51px;
+}
+.about-like{
+	margin-top: 30px;
+}
+.about-like-box span{
+	display: inline-block;
+	width: 120px;
+	height: 50px;
+	line-height: 50px;
+	color: #fff;text-align: center;
+	background: lightskyblue;
+	border-radius: 10px;
+	margin-right: 30px;
+}
+.about-like-box span:nth-child(2){
+	background: #ebc675cc;
+}
+.about-like-box span:nth-child(3){
+	background: indianred;
+}
+.about-like-box span:nth-child(4){
+	background: steelblue;
+}
+.about-like-box span:nth-child(5){
+	background: plum;
+}
+.about-like-box{
+	display: flex;
+	flex-wrap: wrap;
+}
+.about-skill-box img{
+
+	width: 140px;
+	height: 140px;
+	margin-right: 30px;
+}
+.life-list{
+	display: flex;
+	background: rgba(255, 255, 255, 0.6);
+	border-radius: 8px;
+	padding: 20px;
+	margin-bottom: 20px;
+
+}
+.life-list img{
+	width: 228px;
+	height: 144px;
+border-radius: 8px;	
+}
+.ll-text{
+	margin-left: 20px;
+}
+.ll-text h3{
+	color: #333;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.ll-text p{
+	color: #555;
+	font-size: 16px;
+	line-height: 1.8;
+}
+
+#search-input {
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box; /* 确保padding不会增加元素的总宽度 */
+}
+ 
+#search-input:focus {
+  border-color: #0366d6;
+  outline: none; /* 移除聚焦时的默认轮廓 */
+}
+.t p{
+margin-top: 42px;
+	
+}
+.button {
+  background-color:#f2b155; /* 按钮颜色 */
+  border: none;
+  color: white; /* 文字颜色 */
+  padding: 9px 18px; /* 内边距 */
+  text-align: center; /* 文字居中 */
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; /* 字体大小 */
+  margin: 33px 55px;
+  cursor: pointer; /* 鼠标光标变为点击手势 */
+    border-radius: 12px;
+}
+ 
+.button:hover {
+  background-color: #45a049; /* 鼠标悬浮时的按钮颜色 */
+}
+.work{
+	display: flex;
+	flex-wrap: wrap;
+}
+.work img{
+	width: 200px;
+	height: 200px;
+	margin-right:135px ;
+	margin-bottom: 1.875rem;
+	margin-left: 0.25rem;
+}
+.work img:nth-child(4n + 4){
+	margin-right: 0;
+}
+

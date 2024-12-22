@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>personal data</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+				min-height: 100vh;
+				display: flex;
+				background-color: #fafafa;
+				overflow: hidden;
+			}
+
+			aside {
+				width: 256px;
+				height: 100vh;
+				position: fixed;
+				background-color: #27272a;
+				color: white;
+				padding: 2rem;
+				z-index: 10;
+			}
+
+			.profile-image {
+				width: 128px;
+				height: 128px;
+				border-radius: 50%;
+				overflow: hidden;
+				margin: 0 auto 1.5rem;
+				border: 4px solid #facc15;
+				cursor: pointer;
+				transition: transform 0.3s ease;
+			}
+
+			.profile-image:hover {
+				transform: scale(1.1);
+			}
+
+			.profile-image img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			nav {
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+			}
+
+			nav a {
+				display: flex;
+				align-items: center;
+				padding: 0.75rem 1rem;
+				color: white;
+				text-decoration: none;
+				font-size: 0.875rem;
+				transition: all 0.3s ease;
+				border-radius: 0.5rem;
+				transform-origin: left center;
+			}
+
+			nav a:hover {
+				background-color: #3f3f46;
+				transform: scale(1.05);
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+			}
+
+			nav a svg {
+				margin-right: 0.75rem;
+				transition: transform 0.3s ease;
+			}
+
+			nav a:hover svg {
+				transform: scale(1.2);
+			}
+
+			main {
+				margin-left: 256px;
+				flex: 1;
+				overflow-y: auto;
+				scroll-behavior: smooth;
+				height: 100vh;
+				scroll-snap-type: y mandatory;
+			}
+
+			.page {
+				min-height: 100vh;
+				padding: 2rem;
+				transition: transform 0.5s ease-out;
+				scroll-snap-align: start;
+				scroll-snap-stop: always;
+			}
+
+			h2 {
+				display: flex;
+				align-items: center;
+				font-size: 1.25rem;
+				font-weight: bold;
+				margin-bottom: 1.5rem;
+			}
+
+			h2 svg {
+				margin-right: 0.5rem;
+			}
+
+			.grid {
+				display: grid;
+				gap: 2rem;
+			}
+
+			@media (min-width: 768px) {
+				.grid-cols-2 {
+					grid-template-columns: repeat(2, 1fr);
+				}
+
+				.grid-cols-3 {
+					grid-template-columns: repeat(3, 1fr);
+				}
+			}
+
+			.card {
+				background-color: white;
+				padding: 1.5rem;
+				border-radius: 0.5rem;
+				box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+				transition: all 0.3s;
+			}
+
+			.card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+			}
+
+			.info-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 1rem;
+			}
+
+			.info-item p:first-child {
+				font-size: 0.875rem;
+				color: #71717a;
+			}
+
+			.info-item a {
+				color: #3b82f6;
+				text-decoration: none;
+			}
+
+			.info-item a:hover {
+				color: #2563eb;
+			}
+
+			#skills {
+				background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/q%20(1).jpg-0GyI4HXORRcSEa3OMrmKWPrMHk25QX.jpeg');
+				background-size: cover;
+				background-position: center;
+				position: relative;
+			}
+
+			#skills::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: rgba(0, 0, 0, 0.6);
+				z-index: 1;
+			}
+
+			#skills>* {
+				position: relative;
+				z-index: 2;
+			}
+
+			#skills h2 {
+				color: white;
+			}
+
+			.skill-card {
+				text-align: center;
+				background: rgba(255, 255, 255, 0.1);
+				backdrop-filter: blur(10px);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				color: white;
+			}
+
+			.skill-icon {
+				width: 4rem;
+				height: 4rem;
+				background-color: #facc15;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 0 auto 1rem;
+			}
+
+			.skill-icon svg {
+				width: 2rem;
+				height: 2rem;
+				color: white;
+			}
+
+			.skill-title {
+				font-size: 1.125rem;
+				font-weight: 600;
+				margin-bottom: 0.5rem;
+			}
+
+			.skill-description {
+				color: #e2e8f0;
+			}
+
+			.zoom-in {
+				animation: zoomIn 0.5s ease-out;
+			}
+
+			@keyframes zoomIn {
+				from {
+					transform: scale(0.95);
+					opacity: 0.5;
+				}
+
+				to {
+					transform: scale(1);
+					opacity: 1;
+				}
+			}
+
+			#team {
+				background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-xncQ5Ri29gCnV1c3G8uROQnfxTXpD8.png');
+				background-size: cover;
+				background-position: center;
+				color: white;
+			}
+
+			#team .card {
+				background-color: rgba(255, 255, 255, 0.1);
+				backdrop-filter: blur(10px);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+			}
+
+			#team h2,
+			#team .card {
+				color: white;
+			}
+
+			.back-to-top {
+				position: fixed;
+				bottom: 2rem;
+				left: 2rem;
+				width: 40px;
+				height: 40px;
+				background-color: #facc15;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				z-index: 20;
+			}
+
+			.back-to-top:hover {
+				transform: scale(1.1);
+				box-shadow: 0 0 15px rgba(250, 204, 21, 0.4);
+			}
+
+			#profile {
+				background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/pexels-mrwson-4275885.jpg-xFefRRi7qIeIoeI7hrJsCtM7r96Tu5.jpeg');
+				background-size: cover;
+				background-position: center;
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			#profile::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: rgba(0, 0, 0, 0.7);
+				z-index: 1;
+			}
+
+			.profile-content {
+				position: relative;
+				z-index: 2;
+				display: grid;
+				grid-template-columns: 1fr auto;
+				gap: 2rem;
+				align-items: center;
+				max-width: 1200px;
+				width: 100%;
+				padding: 2rem;
+			}
+
+			.profile-info {
+				background: rgba(170, 170, 127, 1.0);
+				padding: 2rem;
+				border-radius: 1rem;
+				backdrop-filter: blur(10px);
+				color: white;
+			}
+
+			.profile-photo {
+				width: 300px;
+				height: 400px;
+				border-radius: 1rem;
+				overflow: hidden;
+				box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+			}
+
+			.profile-photo img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			@keyframes bounceIn {
+				0% {
+					opacity: 0;
+					transform: scale(0.3) translateY(100px);
+				}
+
+				50% {
+					opacity: 0.8;
+					transform: scale(1.1);
+				}
+
+				80% {
+					opacity: 0.9;
+					transform: scale(0.89);
+				}
+
+				100% {
+					opacity: 1;
+					transform: scale(1) translateY(0);
+				}
+			}
+
+			.bounce-in {
+				animation: bounceIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+			}
+
+
+
+			@keyframes fadeInSlide {
+				from {
+					opacity: 0;
+					transform: translateY(20px);
+				}
+
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			.fade-in-slide {
+				animation: fadeInSlide 0.6s ease-out forwards;
+				opacity: 0;
+
+			}
+
+
+			.fade-in {
+				opacity: 1;
+				transition: opacity 0.6s ease-in-out;
+			}
+
+			.page {
+				opacity: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<aside>
+			<div class="profile-image" onclick="scrollToSection('profile')">
+				<img src="img/20190915154013_gmukm.jpg" alt="Profile">
+			</div>
+			<nav>
+				<a href="#profile">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+						<polyline points="14 2 14 8 20 8"></polyline>
+						<line x1="16" y1="13" x2="8" y2="13"></line>
+						<line x1="16" y1="17" x2="8" y2="17"></line>
+						<polyline points="10 9 9 9 8 9"></polyline>
+					</svg>
+					主页
+				</a>
+				<a href="#skills">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<polyline points="16 18 22 12 16 6"></polyline>
+						<polyline points="8 6 2 12 8 18"></polyline>
+					</svg>
+					兴趣爱好
+				</a>
+				<a href="#team">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+						<circle cx="9" cy="7" r="4"></circle>
+						<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+						<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+					</svg>
+					未来从事
+				</a>
+			</nav>
+			<div class="back-to-top" onclick="scrollToSection('profile')">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+					stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<polyline points="18 15 12 9 6 15"></polyline>
+				</svg>
+			</div>
+		</aside>
+		<main>
+			<section id="profile" class="page">
+				<div class="profile-content">
+					<div class="profile-info">
+						<h2>personal data</h2>
+						<div class="info-grid">
+							<div class="info-item">
+								<p>姓名</p>
+								<p>Sea</p>
+							</div>
+							<div class="info-item">
+								<p>QQ</p>
+								<p>132037456</p>
+							</div>
+							<div class="info-item">
+								<p>性别</p>
+								<p>男</p>
+							</div>
+							<div class="info-item">
+								<p>QQ空间</p>
+								<a href="#">我的空间</a>
+							</div>
+							<div class="info-item">
+								<p>年龄</p>
+								<p>19</p>
+							</div>
+							<div class="info-item">
+								<p>主页</p>
+								<a href="#">www.xxx.cn</a>
+							</div>
+							<div class="info-item">
+								<p>英文名</p>
+								<p>A sea without memory</p>
+							</div>
+							<div class="info-item">
+								<p>邮箱</p>
+								<p>邮箱</p>
+								<a href="#">132037456@qq.com</a>
+							</div>
+						</div>
+						<div class="info-item mt-4">
+							<p>个人简介</p>
+							<p>这个人很懒没有留下简介~
+							</p>
+						</div>
+					</div>
+					<div class="profile-photo">
+						<img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20190915154013_gmukm.jpg-n9Cg0pj5r88Xga6abtqlzdwN5vxeEl.jpeg"
+							alt="Profile Photo">
+					</div>
+				</div>
+			</section>
+			<section id="skills" class="page">
+				<h2>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<polyline points="16 18 22 12 16 6"></polyline>
+						<polyline points="8 6 2 12 8 18"></polyline>
+					</svg>
+					Personal interests
+				</h2>
+				<div class="grid grid-cols-3">
+					<div class="card skill-card">
+						<div class="skill-icon">
+							<img src="img/zhaoxiangji.png" alt="" / width="24" height="24" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+							<polyline points="16 18 22 12 16 6"></polyline>
+							<polyline points="8 6 2 12 8 18"></polyline>
+							</svg>
+						</div>
+						<h3 class="skill-title">摄影:</h3>
+						<p class="skill-description">喜欢捕捉生活中的美好瞬间，记录点滴回忆。</p>
+					</div>
+					<div class="card skill-card">
+						<div class="skill-icon">
+							<img src="img/tushu.png" alt="" / width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="16 18 22 12 16 6"></polyline>
+							<polyline points="8 6 2 12 8 18"></polyline>
+							</svg>
+						</div>
+						<h3 class="skill-title">阅读：</h3>
+						<p class="skill-description">沉浸在书籍的世界里，拓宽视野和思维。</p>
+					</div>
+					<div class="card skill-card">
+						<div class="skill-icon">
+							<img src="img/yuanzu.png" alt="" / width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="16 18 22 12 16 6"></polyline>
+							<polyline points="8 6 2 12 8 18"></polyline>
+							</svg>
+						</div>
+						<h3 class="skill-title">远足：</h3>
+						<p class="skill-description">享受大自然的宁静，放松身心。</p>
+					</div>
+					<div class="card skill-card">
+						<div class="skill-icon">
+							<img src="img/yinle.png" alt="" / width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="16 18 22 12 16 6"></polyline>
+							<polyline points="8 6 2 12 8 18"></polyline>
+							</svg>
+						</div>
+						<h3 class="skill-title">音乐：</h3>
+						<p class="skill-description">听旋律和歌词带来的共鸣，让心灵愉悦。</p>
+					</div>
+					<div class="card skill-card">
+						<div class="skill-icon">
+							<img src="img/bianchengI.png" alt="" / width="24" height="24" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+							<polyline points="16 18 22 12 16 6"></polyline>
+							<polyline points="8 6 2 12 8 18"></polyline>
+							</svg>
+						</div>
+						<h3 class="skill-title">编程：</h3>
+						<p class="skill-description">解决问题的过程充满挑战和乐趣。</p>
+					</div>
+					<div class="card skill-card">
+						<div class="skill-icon">
+							<img src="img/shougongju.png" alt="" / width="24" height="24" viewBox="0 0 24 24"
+								fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round">
+							<polyline points="16 18 22 12 16 6"></polyline>
+							<polyline points="8 6 2 12 8 18"></polyline>
+							</svg>
+						</div>
+						<h3 class="skill-title">手工：</h3>
+						<p class="skill-description">喜欢创造出独特而有温度的小物品。</p>
+					</div>
+					<div class="card skill-card">
+						<div class="skill-icon">
+							<img src="img/xiaqi.png" alt="" / width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="16 18 22 12 16 6"></polyline>
+							<polyline points="8 6 2 12 8 18"></polyline>
+							</svg>
+						</div>
+						<h3 class="skill-title">下棋：</h3>
+						<p class="skill-description">锻炼思维逻辑，感受策略的魅力。</p>
+					</div>
+					<div class="card skill-card">
+						<div class="skill-icon">
+							<img src="img/youyong.png" alt="" / width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="16 18 22 12 16 6"></polyline>
+							<polyline points="8 6 2 12 8 18"></polyline>
+							</svg>
+						</div>
+						<h3 class="skill-title">游泳：</h3>
+						<p class="skill-description">在水中感受自由与活力，同时强健体魄。</p>
+					</div>
+					<div class="card skill-card">
+						<div class="skill-icon">
+							<img src="img/lvhang.png" alt="" / width="24" height="24" viewBox="0 0 24 24" fill="none"
+								stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="16 18 22 12 16 6"></polyline>
+							<polyline points="8 6 2 12 8 18"></polyline>
+							</svg>
+						</div>
+						<h3 class="skill-title">旅行：</h3>
+						<p class="skill-description">探索不同的风土人情，收获独特的记忆和见闻。</p>
+					</div>
+				</div>
+			</section>
+			<section id="team" class="page">
+				<h2>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+						<circle cx="9" cy="7" r="4"></circle>
+						<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+						<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+					</svg>
+					Personal prospects
+				</h2>
+				<div class="grid grid-cols-3">
+					<div class="card">
+						<h3>技术与数字化技能</h3>
+						<img src="img/keji1.png" alt="" / width="90px" height="90px">
+						<p>精通编程、数据分析、人工智能和云计算等技术。
+							熟悉多种开发工具和数字平台，适应不断变化的技术环境。</p>
+					</div>
+					<div class="card">
+						<h3>跨学科能力</h3>
+						<img src="img/学科分析.png" alt="" / width="90px" height="90px">
+						<p>能在多个领域之间搭建桥梁，例如生物学与人工智能、工程与设计的结合。
+							具备从不同学科中汲取灵感并整合应用的能力。
+						</p>
+					</div>
+					<div class="card">
+						<h3>创新与创造力</h3>
+						<img src="img/chuangxin.png" alt="" / width="90px" height="90px">
+						<p>提出解决复杂问题的新颖方法。
+							开发新产品或优化现有流程，具有敏锐的市场洞察力。</p>
+					</div>
+					<div class="card">
+						<h3>全球化视野与多语言能力</h3>
+						<img src="img/quanqiu.png" alt="" / width="90px" height="90px">
+						<p>理解多元文化，能在国际团队中工作。
+							熟练掌握至少两到三种语言以适应全球化需求。</p>
+					</div>
+					<div class="card">
+						<h3>可持续发展意识</h3>
+						<img src="img/chixufazhan.png" alt="" / width="90px" height="90px">
+						<p>关注环保和社会责任，倡导绿色科技和循环经济。
+							具备设计和执行可持续项目的能力。
+						</p>
+					</div>
+					<div class="card">
+						<h3>终身学习能力</h3>
+						<img src="img/xuexi.png" alt="" / width="90px" height="90px">
+						<p>拥抱快速学习新技能的心态，掌握自我提升方法。
+							善于利用在线学习资源和行业动态更新知识。</p>
+					</div>
+					<div class="card">
+						<h3>高效沟通与协作能力</h3>
+						<img src="img/chat-poll-line.png" alt="" / width="90px" height="90px">
+						<p>能清晰传达想法，促进团队协作。
+							掌握线上和线下沟通技巧，适应混合工作模式。</p>
+					</div>
+					<div class="card">
+						<h3>数据驱动决策能力</h3>
+						<img src="img/shujuwajue.png" alt="" / width="90px" height="90px">
+						<p>精通数据采集、处理和解读。
+							能够利用数据分析支持业务决策和战略规划。</p>
+					</div>
+					<div class="card">
+						<h3>心理韧性与适应力</h3>
+						<img src="img/jieduxinli-xinliweiji.png" alt="" / width="90px" height="90px">
+						<p>面对不确定性和快速变化时保持冷静。
+							善于处理压力、调整心态，具备解决冲突的能力。</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<script>
+			function scrollToSection(sectionId) {
+				const targetElement = document.getElementById(sectionId);
+				if (targetElement) {
+					targetElement.scrollIntoView({
+						behavior: 'smooth',
+						block: 'start',
+						inline: 'nearest'
+					});
+				} else {
+					console.error(`Section with ID "${sectionId}" not found.`);
+				}
+			}
+
+
+			document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+				anchor.addEventListener('click', function(e) {
+					e.preventDefault();
+					const targetId = this.getAttribute('href').substring(1);
+					scrollToSection(targetId);
+				});
+			});
+
+
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						// 动画-
+						entry.target.classList.add('fade-in-slide');
+						// 取消重复-----
+						observer.unobserve(entry.target);
+					}
+				});
+			}, {
+				threshold: 0.5
+			});
+
+			// 观察所有页面的 `.page` 元素----
+			document.querySelectorAll('.page').forEach(page => {
+				observer.observe(page);
+			});
+		</script>
+	</body>
+</html>

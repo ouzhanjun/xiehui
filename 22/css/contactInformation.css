@@ -1,0 +1,43 @@
+.resume-container {
+	max-width: 1200px;
+	margin: 30px auto;
+	padding: 20px;
+	/* 使用线性渐变作为背景 */
+	/* border: 1px solid #ccc; */
+	box-shadow:
+		5px -5px 80px rgba(0, 255, 0, 0.5),
+		-5px 5px 80px rgba(0, 0, 255, 0.5);
+	transition: box-shadow 0.3s;
+	min-height: 620px;
+	box-sizing: border-box;
+	
+}
+
+.resume-container:hover {
+	box-shadow:
+		-10px -10px 80px rgba(0, 255, 0, 0.7),
+		10px 10px 80px rgba(0, 0, 255, 0.7);
+}
+
+
+.skills {
+	margin-bottom: 40px;
+	
+}
+.content-box{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 150px;
+}
+.content-box-item{
+	width: 100px;
+	height: 120px;
+	justify-content: center;
+	align-items: center;
+	padding: 0 100px;
+	text-align: center;
+}
+.lines{
+	border-right: 1px dashed #d65049;
+	
+}

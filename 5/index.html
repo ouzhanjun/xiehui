@@ -1,0 +1,184 @@
+<!DOCTYPE html> <!-- 声明文档类型为HTML5 -->
+<html lang="zh-CN"> <!-- 设置页面语言为中文简体 -->
+<head>
+    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <!-- 设置视口，确保页面在移动设备上响应良好 -->
+    <meta name="description" content="陈柏江的个人主页，展示个人项目、掌握的技能和联系方式。">
+    <!-- 设置页面描述 -->
+    <meta name="keywords" content="陈柏江, 个人主页, 项目, 技能, 联系方式">
+    <!-- 设置页面关键词 -->
+    <title>陈柏江的个人主页</title> <!-- 设置页面标题 -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <!-- 引入Google Fonts的Roboto字体 -->
+    <link rel="stylesheet" href="index.css"> <!-- 引入外部CSS样式表 -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>欢迎来到我的个人主页</h1> <!-- 页面主标题 -->
+        </div>
+    </header>
+    
+    <nav>
+        <div class="container">
+            <!-- 导航链接 -->
+            <a href="#about" class="nav-link">关于我</a>
+            <a href="#skills" class="nav-link">掌握的技能</a>
+            <a href="#projects" class="nav-link">项目经验</a>
+            <a href="#education" class="nav-link">教育背景</a>
+            <a href="#hobbies" class="nav-link">兴趣爱好</a>
+            <a href="#awards" class="nav-link">奖项与荣誉</a>
+            <a href="#contact" class="nav-link">联系方式</a>
+        </div>
+    </nav>
+    
+    <div class="main-content container">
+        <!-- 关于我部分 -->
+        <section id="about">
+            <h1>关于我</h1> <!-- 章节标题 -->
+            <img src="images/tx.jpg" class="profile-pic" alt="个人照片"> <!-- 个人照片 -->
+            <p>
+                <span style="color: chocolate;">
+                    我叫陈柏江，今年15岁，性别：男，来自于24级程序设计一班，是24级初中毕业生，专业是程序设计。
+                </span>
+                <span style="color: cadetblue;">
+                    本人性格开朗、踏实、稳重、有活力，待人热情、真诚。喜欢在空余的时间看书和听音乐，从中减轻平时学习中带来的压力，还可以学到书本中学不到的知识，开拓自己的眼界。积极并不断进取是我做事的原则，谦虚和谨慎是我的优点，懂得不断从生活和学习中提高和完善自己。
+                </span>
+            </p>
+        </section>
+        
+        <!-- 项目经验部分 -->
+        <section id="projects">
+            <h2>项目经验</h2> <!-- 章节标题 -->
+            <p>以下是我参与过的一些项目：</p>
+            <ul class="projects-list">
+                <li>
+                    <h3>西式甜品网(仿)</h3> <!-- 项目名称 -->
+                    <p><strong>技术栈：</strong>HTML, CSS</p> <!-- 项目技术栈 -->
+                </li>
+                <li>
+                    <h3>家居网(仿)</h3> <!-- 项目名称 -->
+                    <p><strong>技术栈：</strong>HTML, CSS</p> <!-- 项目技术栈 -->
+                </li>
+            </ul>
+        </section>
+        
+        <!-- 掌握的技能部分 -->
+        <section id="skills">
+            <h2>掌握的技能</h2> <!-- 章节标题 -->
+            <ul class="skills-list">
+                <li>
+                    <img src="images/py.png" alt="Python"> <!-- Python图标 -->
+                    <span>Python</span> <!-- 技能名称 -->
+                </li>
+                <li>
+                    <img src="images/c.png" alt="C"> <!-- C语言图标 -->
+                    <span>C</span> <!-- 技能名称 -->
+                </li>
+                <li>
+                    <img src="images/C++.png" alt="C++"> <!-- C++图标 -->
+                    <span>C++</span> <!-- 技能名称 -->
+                </li>
+                <li>
+                    <img src="images/html.png" alt="HTML"> <!-- HTML图标 -->
+                    <span>HTML</span> <!-- 技能名称 -->
+                </li>
+                <li>
+                    <img src="images/css.png" alt="CSS"> <!-- CSS图标 -->
+                    <span>CSS</span> <!-- 技能名称 -->
+                </li>
+            </ul>
+            <div class="skills-description new-description">
+                <p>我具备扎实的编程基础，熟悉多种编程语言，并能够灵活应用于实际项目中。除了编程，我还具备良好的逻辑思维和问题解决能力，能够快速学习新技术并应用于开发中。</p> <!-- 技能描述 -->
+                <ul class="skills-details">
+                    <li><strong>编程语言:</strong> <span style="color: brown;">Python, C, C++</span></li> <!-- 编程语言列表 -->
+                    <li><strong>Web 开发:</strong> <span style="color: brown;">HTML, CSS</span></li> <!-- Web开发技能 -->
+                    <li><strong>数据库:</strong> <span style="color: brown;">无</span></li> <!-- 数据库技能 -->
+                    <li><strong>其他:</strong> <span style="color: brown;">无</span></li> <!-- 其他技能 -->
+                </ul>
+            </div>
+        </section>
+        
+        <!-- 教育背景部分 -->
+        <section id="education">
+            <h2>教育背景</h2> <!-- 章节标题 -->
+            <ul class="education-list">
+                <li>
+                    <h3>初中</h3> <!-- 教育阶段 -->
+                    <p>学校名称：湛江市北大附属学校</p> <!-- 学校名称 -->
+                    <p>时间：2021年9月 - 2024年6月</p> <!-- 学习时间 -->
+                </li>
+                <li>
+                    <h3>技校</h3> <!-- 教育阶段 -->
+                    <p>学校名称：广州市白云工商技师学院</p> <!-- 学校名称 -->
+                    <p>时间：2024年9月 - 现在</p> <!-- 学习时间 -->
+                </li>
+            </ul>
+        </section>
+        
+        <!-- 兴趣爱好部分 -->
+        <section id="hobbies">
+            <h2>兴趣爱好</h2> <!-- 章节标题 -->
+            <p>以下是我的一些兴趣爱好：</p>
+            <ul class="hobbies-list">
+                <li>阅读</li> <!-- 兴趣爱好 -->
+                <li>听音乐</li> <!-- 兴趣爱好 -->
+                <li>编程</li> <!-- 兴趣爱好 -->
+                <li>运动</li> <!-- 兴趣爱好 -->
+                <li>旅行</li> <!-- 兴趣爱好 -->
+            </ul>
+        </section>
+        
+        <!-- 奖项与荣誉部分 -->
+        <section id="awards">
+            <h2>奖项与荣誉</h2> <!-- 章节标题 -->
+            <ul class="awards-list">
+                <li>
+                    <h3>奖项名称1</h3> <!-- 奖项名称 -->
+                    <p>获奖时间：无</p> <!-- 获奖时间 -->
+                    <p>描述：无</p> <!-- 奖项描述 -->
+                </li>
+                <li>
+                    <h3>奖项名称2</h3> <!-- 奖项名称 -->
+                    <p>获奖时间：无</p> <!-- 获奖时间 -->
+                    <p>描述：无</p> <!-- 奖项描述 -->
+                </li>
+            </ul>
+        </section>
+        
+        <!-- 联系方式部分 -->
+        <section id="contact">
+            <h1>联系方式</h1> <!-- 章节标题 -->
+            <p>各位评委老师可以通过以下方式联系我：</p>
+            <ul class="contact-list">
+                <li><strong>邮箱：</strong>19953624117@163.com</li> <!-- 邮箱 -->
+                <li><strong>电话：</strong>19953624117</li> <!-- 电话 -->
+                <li><strong>QQ：</strong>1553468522</li> <!-- QQ -->
+                <li><strong>微信：</strong>cbj170624</li> <!-- 微信 -->
+            </ul>
+            <div class="contact-form">
+                <h3>给我留言(因为技术原因，还未学习数据库，所以此功能暂时还无法使用，请见谅)</h3> <!-- 表单标题 -->
+                <form action="#" method="post" onsubmit="return false;"> 
+                    <label for="name">姓名：</label> <!-- 姓名标签 -->
+                    <input type="text" id="name" name="name" required> <!-- 姓名输入框 -->
+                    
+                    <label for="email">邮箱：</label> <!-- 邮箱标签 -->
+                    <input type="email" id="email" name="email" required> <!-- 邮箱输入框 -->
+                    
+                    <label for="message">留言：</label> <!-- 留言标签 -->
+                    <textarea id="message" name="message" rows="5" required></textarea> <!-- 留言输入框 -->
+                    
+                    <button type="submit">发送</button> <!-- 提交按钮 -->
+                </form>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>版权所有：19953624117@163.com</p> <!-- 页脚信息 -->
+        </div>
+    </footer>
+</body>
+</html>

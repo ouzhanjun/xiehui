@@ -1,0 +1,294 @@
+/* 通用样式重置，去除默认的边距和填充 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; /* 选择一种比较现代、清晰的字体 */
+  line-height: 1.6;
+  background-color: #f8f9fa; /* 柔和的浅灰色背景 */
+  color: #333; /* 主要文本颜色为深灰色 */
+}
+
+/* 页面头部样式 */
+#header-section {
+  background-color: #212529; /* 头部背景使用深色，营造沉稳感 */
+  color: white;
+  padding: 30px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加淡淡的阴影效果 */
+  position: relative;
+  overflow: hidden; /* 隐藏超出头部范围的动画元素 */
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid white; /* 给头像添加白色边框，增强立体感 */
+  animation: rotateAvatar 10s linear infinite; /* 头像旋转动画 */
+  filter: blur(10px);
+}
+
+@keyframes rotateAvatar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header-info {
+  margin-left: 30px;
+}
+
+.header-summary {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.main-navigation {
+  margin-top: 20px;
+}
+
+.main-navigation ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  margin-right: 30px;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent; /* 初始为透明下划线 */
+  transform-origin: left;
+  transform: scaleX(0); /* 初始宽度为0 */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ccc;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1); /* 鼠标悬停时下划线展开 */
+  background-color: #ccc; /* 下划线变为灰色 */
+}
+
+/* 主体内容区域样式 */
+#main-content-area {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ccc; /* 标题下方添加下划线 */
+  padding-bottom: 10px;
+  position: relative;
+  overflow: hidden; /* 隐藏动画溢出部分 */
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff; /* 蓝色下划线 */
+  animation: moveUnderline 3s linear infinite; /* 下划线移动动画 */
+}
+
+@keyframes moveUnderline {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.section-content {
+  margin-top: 20px;
+}
+
+/* 技能专长部分样式（使用网格布局展示技能项） */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 每行显示3个技能项 */
+  grid-gap: 30px;
+}
+
+.skill-item {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden; /* 隐藏技能项内的动画溢出部分 */
+}
+
+.skill-item:hover {
+  transform: translateY(-5px); /* 鼠标悬停时向上稍微移动，增加立体感 */
+}
+
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  animation: pulseIcon 2s ease-in-out infinite alternate; /* 技能图标脉冲动画 */
+}
+
+@keyframes pulseIcon {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* 项目经验部分样式（使用网格布局展示项目项） */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 每行显示2个项目 */
+  grid-gap: 30px;
+}
+
+.project-item {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  overflow: hidden; /* 隐藏超出部分，保证布局整齐 */
+  position: relative;
+  animation: projectFadeIn 1s ease forwards; /* 项目项淡入动画 */
+  opacity: 0; /* 初始透明度为0 */
+  animation-delay: calc(var(--index) * 0.2s); /* 根据项目项顺序设置延迟 */
+}
+
+.project-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1); /* 半透明遮罩 */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-item:hover::before {
+  opacity: 1; /* 鼠标悬停时显示遮罩 */
+}
+
+@keyframes projectFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.project-img {
+  width: 40%;
+  object-fit: cover; /* 保持图片比例并填充容器 */
+}
+
+.project-details {
+  width: 60%;
+  padding: 20px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff; /* 链接颜色为蓝色，符合常规视觉习惯 */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+  overflow: hidden; /* 隐藏链接动画溢出部分 */
+}
+
+.project-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #007bff; /* 蓝色下划线 */
+  transform: translateX(-100%); /* 初始位置在左边隐藏 */
+  transition: transform 0.3s ease;
+}
+
+.project-link:hover::after {
+  transform: translateX(0); /* 鼠标悬停时下划线从左到右出现 */
+}
+
+.project-link:hover {
+  color: #0056b3;
+}
+
+/* 联系我部分样式 */
+.contact-list {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+.contact-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-list i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* 页面底部样式 */
+#footer-section {
+  background-color: #212529;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+/* 返回顶部 */
+.back-to-top-link{
+	position: fixed;
+	    top: 80%;
+	    left: 98%;
+}

@@ -1,0 +1,271 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	list-style: none;
+}
+body{
+	background-image: linear-gradient(to bottom,#544e72,#692e2c);
+	animation: opc 5s ease;
+}
+@keyframes opc {
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+	
+}
+a{
+	text-decoration: none;
+}
+.title-box{
+	width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 80px;
+	font-weight: 1000;
+	padding: 100px;
+}
+.title-box p{
+	font-family:"微软雅黑";
+	font-size: 100px;
+	font-weight: 700;
+	color: aliceblue;
+	text-shadow: 0 0 15px #ccc;
+	line-height: 130px;
+}
+.main a{
+	height: 45px;
+	width: 200px;
+	color: black;
+}
+.main a:hover{
+	margin-top: 10px;
+	color: white;
+	background: rosybrown;
+	border-radius: 30px;
+}
+.main{
+	/* padding-top:10%; */
+	width: 80%;
+	height: 600px;
+	display: flex;
+	margin: 0 auto;
+}
+.box1{
+	flex: 1;
+	overflow: hidden;
+	transition: .5s;
+	margin:0 20px;
+	box-shadow: 10px 10px 20px rgba(0,0,05);
+	border-radius: 30px;
+	border: 10px solid white;
+	background: #fff;
+}
+.box1>img{
+	width: 200%;
+	height: 90%;
+	object-fit: cover;
+	transition: .5s;
+}
+.box1>span{
+	font:bold 30px "微软雅黑";
+	height: 8%;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.box1:hover{
+	flex-basis:40% ;
+}
+.box1 normal:hover{
+	width: 100%;
+	height: 100%;
+}
+#data{
+	width: 1000px;
+	height: 700px;
+	padding: 30px;
+	margin:0 auto;
+	margin-top: 100px;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	overflow:hiidden;
+	background: #fff;
+	border-radius: 30px;
+	box-shadow: 10px 10px 20px rgba(0,0,05);
+}
+.left{
+	height: 650px;
+	width: 300px;
+	/* background: #984746; */
+	float: left;
+	border: 8px solid #fff;
+	text-align: center;
+	line-height: 45px;
+}
+.right{
+	height: 650px;
+	width: 640px;
+	background: #3e5678;
+	float: left;
+	border-top:5px solid #fff;
+	border-right: 8px solid #fff;
+	border-bottom: 8px solid #fff;
+}
+.top{
+	height: 350px;
+	background: #544e72;
+	border-bottom: 8px solid #fff;
+	line-height: 40px;
+	color: aliceblue;
+}
+.photo{
+	text-align: center;
+}
+.title p{
+	font-family:"微软雅黑";
+	font-size: 35px;
+	font-weight: 700;
+	background-image: linear-gradient(90deg,#984746,#544e72);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	line-height: 90px;
+}
+.txt{
+	padding:30px 0 0 60px;
+	width: 600px;
+	height: 350px;
+}
+.photo img{
+	margin-top: 30px;
+	width: 250px;
+	border-radius: 50%;
+	border: 10px solid wheat;
+	
+}
+.bottom{
+	height: 290px;
+	background:#3e5678;
+	border-bottom: 8px solid #fff;
+	line-height: 40px;
+	color: aliceblue;
+}
+.txt-span{
+	margin-top: 20px;
+}
+.txt-span span{
+	margin: 25px;
+	font-size: 15px;
+	font-weight: bold;
+}
+.txt-image img{
+	width: 40px;
+	float: left;
+	margin: 20px 21px;
+	background: #984746;
+	border-radius: 50%;
+}
+#article{
+	width: 1000px;
+	height: 700px;
+	padding: 30px;
+	margin:0 auto;
+	margin-top: 100px;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	overflow:hiidden;
+	background: #fff url(img/bgimg.jpg) repeat-y;
+	border-radius: 30px;
+	box-shadow: 10px 10px 20px rgba(0,0,05);
+}
+.atc-title{
+	width: 942px;
+	padding-top: -14px;
+	height: 45px;
+	border-bottom: 1px solid #666;
+}
+.atc-txt{
+	margin-top: 20px;
+	text-indent: 2em;
+	font-family: "宋体";
+	letter-spacing: 5px;
+}
+.atc-txt span{
+	color: darkred;
+	font-weight: bold;
+}
+#contact{
+	width: 1000px;
+	height: 300px;
+	padding: 30px;
+	margin:0 auto;
+	margin-top: 100px;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	overflow:hiidden;
+	background: #fff url(img/sakura.jpg);
+	border-radius: 30px;
+	box-shadow: 10px 10px 20px rgba(0,0,05);
+}
+#contact>div{
+	width: 950px;
+}
+.top-box{
+	height: 80px;
+	float: right;
+	/* background: #3e5678; */
+}
+.bottom-box{
+	padding-top: 28px;
+	padding-left: 100px;
+	height: 165px;
+	font-size: 30px;
+	/* background: #ccc; */
+}
+.top-box img{
+	width: 180px;
+	border-radius: 50%;
+	transition: width 2s, height 2s, transform 2s;
+}
+.top-box img:hover{
+	width: 200px;
+}
+.top-box h2{
+	margin-bottom:20px ;
+	color: white;
+	text-align: center;
+	transition: 1s;
+	transition-timing-function: ease;
+}
+.top-box h2:hover{
+	font-size: 30px;
+	color: #692e2c;
+}
+.bottom-box li{
+	line-height: 60px;
+	font-weight: bold;
+	transition: 1s;
+	transition-timing-function: ease;
+}
+.bottom-box li:hover{
+	color: #3e5678;
+	font-size: 40px;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,230 @@
+.big{
+  width: 1000px;
+  height: 600px;
+  background: linear-gradient(#4ec7b3,#40a6e8);
+  border-radius: 15px;
+}
+.left{
+  width: 300px;
+  height: 600px;
+  background: linear-gradient(#4ec7b3,#40a6e8);
+  border-radius: 15px 0 0 15px;
+  float: left;
+}
+img{
+  border-radius: 60px;
+  border: 2px solid #fefefe;
+  margin-top: 30px;
+  margin-left: 90px;
+}
+#v1{
+  color: #fefefe;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 30px;
+}
+span{
+  font-size: 13px;
+  display: flex;
+  margin-top: 4px;
+  justify-content: center;
+  text-align: center;
+  color: #fefefe;
+  line-height: 0%;
+
+}
+.svg{
+  margin-top: 20px;
+  text-align: center;
+}
+.button{
+  border-radius: 20px;
+  border: 2px solid #fefefe80;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.7) 0px 0px 1px 0px;
+  background-color: rgba(0, 0, 0, 0);
+  width: 9em;
+  height: 42px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+a{
+  color: #fefefe;
+  text-decoration: none;
+}
+.td{
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: #fefefe;
+  font-size: 10px;
+  width: 300px;
+  height: 255px;
+}
+.right{
+  float: right;
+  background-color: #fefefe;
+  border-radius: 15px;
+  width: 700px;
+  height: 600px;
+}
+#v3{
+  font-size: 24px;
+  color: black;
+  font-weight: bold;
+  margin-left: 10%;
+  margin-top: 8%;
+}
+p,b,i,span,h1,h2,h3,h4,h5,h6{
+  font-family: "黑体-简", "微软雅黑", "文泉驿微米黑";
+}
+.box1{
+  width: 200px;
+  height: 568px;
+  float: left;
+  margin-left: 10%;
+}
+.diqu,.dh,.youxiang,.ly{
+  text-align: center;
+}
+.diqu{
+  width: 200px;
+  height: 120px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px inset;
+  border-radius: 15px;
+}
+#v4{
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 5px;
+  margin-top: 15px;
+}
+#v5{
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 5px;
+}
+ #v6{
+  font-weight: bold;
+  font-size: 18px;
+  background: linear-gradient(30deg, #4ec7b3,#40a6e8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation:  ff 3s linear infinite;
+}
+.top{
+  margin-top: 5px;
+}
+.dh{ 
+  width: 200px;
+  height: 120px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px inset;
+  border-radius: 15px;
+  margin-top: 10%;
+}
+.youxiang{
+  width: 200px;
+  height: 120px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px inset;
+  border-radius: 15px;
+  margin-top: 10%;
+}
+.ly{
+  width: 200px; 
+  height: auto;
+  margin-top: 10%;
+}
+.ys{
+  width: 300px;
+  height: 350px;
+  float: right;
+  margin-right: 10%;
+}
+.center,#v7,li{
+  vertical-align: middle;
+  margin-top: 0%;
+}
+#v7{
+  font-size: 18px;
+  font-weight: bold;
+  font-family: '幼圆';
+}
+ul{
+  width: 300px;
+  padding-left: 0;
+}
+li{
+  line-height: none;
+  list-style: none;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 28px 0;
+  position: relative;
+}
+li::before,li::after{
+  content: "";
+  display: block;
+  height: 15px;
+  width: 100%;
+  background-color: #1f4a59;
+  position: absolute;
+  border-radius: 6px;
+  bottom: -28px;
+}
+li::before{
+  box-shadow:  0 0 6px rgba(75, 207, 250, 0.2);
+
+}
+li::after{
+  background-image: linear-gradient(90deg,#4ec7b3,#40a6e8);
+}
+li::after{
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+.wan::after{
+  animation-name: wan;
+}
+.html::after{
+  animation-name: html;
+}
+.css::after{
+  animation-name: css;
+}
+.JavaScript::after{
+  animation-name: JavaScript;
+}
+@keyframes wan{
+  from{
+    width: 0;
+  }
+  to{
+    width: 20%;
+  }
+}
+@keyframes html{
+  from{
+    width: 0;
+  }
+  to{
+    width: 85%;
+  }
+}
+@keyframes css{
+  from{
+    width: 0;
+  }
+  to{
+    width: 70%;
+  }
+}
+@keyframes JavaScript{
+  from{
+    width: 0;
+  }
+  to{
+    width: 15%;
+  }
+}
+

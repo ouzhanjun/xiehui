@@ -1,0 +1,361 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+body {
+	background: url(../img/03.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.box-1 {
+	/* max-width: 900px;
+	min-width: 320px; */
+	width: 900px;
+	height: 700px;
+	background-color: white;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+
+.box-2 {
+	width: 900px;
+	height: 30px;
+	margin: 0 auto;
+	background-color: lightblue;
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+}
+
+.box-2 li {
+	width: 180px;
+	height: 30px;
+	border: 0.25px solid lightcyan;
+	text-align: center;
+}
+
+.box-2 li a {
+	color: white;
+	width: 180px;
+	height: 30px;
+	display: inline-block;
+}
+
+.box-2 a:hover {
+	color: aqua;
+}
+
+.box-2 li:hover {
+	background-color: skyblue;
+}
+
+.box-3 {
+	width: 900px;
+	height: 200px;
+	background-color: antiquewhite;
+	display: flex;
+	justify-content: space-around;
+}
+
+.box-3-1 {
+	width: 150px;
+	height: 150px;
+	/* 	background-color: yellow; */
+	margin-left: 30px;
+	position: relative;
+	top: 40px;
+	border: 0.5px solid lavenderblush;
+	border-radius: 75px;
+	background: url(../img/01.webp);
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+.box-3-2 {
+	width: 700px;
+	height: 200px;
+	/* 	background-color: yellow; */
+}
+
+.box-3-2 ul {
+	width: 700px;
+	height: 175px;
+	/* background-color: #FF0000; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 30px;
+}
+
+.box-3-2 ul>li {
+	width: 150px;
+}
+
+.box-4 {
+	width: 900px;
+	height: 470px;
+	/* 	background-color: beige; */
+	background: url(../img/02.webp);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.box-4 ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.box-4 ul>li {
+	width: 120px;
+	height: 130px;
+	background-color: aquamarine;
+	/* 	border: 0.5px solid lightblue; */
+	margin: 20px;
+	margin-top: 50px;
+	background: url(../img/01.webp);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* 第二个网页  个人简介*/
+.num-1 {
+	width: 900px;
+	height: 470px;
+	background-color: beige;
+	background: url(../img/02.webp);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.num-1 h1 {
+	text-align: center;
+}
+
+.num-1>p {
+	width: 600px;
+	height: 400px;
+	/* 	background-color: antiquewhite; */
+	margin: 0 auto;
+	font-size: 40px;
+}
+
+
+/* 第三个网页 在校经历 */
+.sum-1>ul {
+	width: 900px;
+	height: 30px;
+	margin: 0 auto;
+	background-color: lightblue;
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+}
+
+.sum-1 li {
+	width: 180px;
+	height: 30px;
+	border: 0.25px solid lightcyan;
+	text-align: center;
+}
+
+.sum-1 li a {
+	color: white;
+	width: 180px;
+	height: 30px;
+	display: inline-block;
+}
+
+.sum-1 a:hover {
+	color: aqua;
+}
+
+.sum-1 li:hover {
+	background-color: skyblue;
+}
+
+.sum-2 {
+	width: 900px;
+	height: 850px;
+	background-color: #F5F5DC;
+	margin: 0 auto;
+}
+
+.sum-2 ul {
+	width: 900px;
+	height: 200px;
+	/* background-color: #7FFFD4; */
+	display: flex;
+	background: url(../img/05.webp);
+	background-size: cover;
+	background-repeat: no-repeat;
+	justify-items: baseline;
+}
+
+.sum-2 ul>li {
+	width: 400px;
+	height: 200px;
+	/* 	background-color: #00FFFF; */
+}
+
+
+/* 比赛照片 */
+.nav-1>ul {
+	width: 1200px;
+	height: 30px;
+	margin: 0 auto;
+	background-color: lightblue;
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+}
+
+.nav-1 li {
+	width: 250px;
+	height: 30px;
+	border: 0.25px solid lightcyan;
+	text-align: center;
+}
+
+.nav-1 li a {
+	color: white;
+	width: 230px;
+	height: 30px;
+	display: inline-block;
+}
+
+.nav-1 a:hover {
+	color: aqua;
+}
+
+.nav-1 li:hover {
+	background-color: skyblue;
+}
+
+/* 确保你的CSS样式是独立的，不会影响到其他元素 */
+.overall{
+	/* 设置窗口大小 */
+    width: 1200px;
+	height: 600px;
+	margin: 0 auto;
+}
+.content ul{
+	/* 去除标签lu li li ul默认加的样式 */
+    list-style-type: none;
+}
+.content ul>li{
+	width: 1200px;
+	height:600px;
+	
+	/* 设置绝对定位 */
+	position: absolute;
+	 
+    /* 设置过度效果 时间为1s */
+	transition: 2s;
+	
+	/* 设置最大透明度 默认一开始图片为透明的 
+	 当下面js加载的时候 第一张图片设置为不透明*/
+	opacity: 0;
+}
+
+/* 设置图片样式 */
+.content ul>li>img{
+	/* 设置每一张图片大小 */
+	width: 1200px;
+	height: 550px;
+}
+
+/* 设置轮播图下面的小点 */
+.content ol{
+	/* 设置相对定位 */
+	position: relative;
+	
+	/* 设置网络布局 */
+	display: grid;
+	
+	/* 设置网络布局中的列数及宽度 */
+	grid-template-columns: repeat(3,75px);
+	
+	/* 设置网络布局最后的行数及宽度 */
+	grid-template-rows: auto;
+	
+	/* 设置网络行与列之间的间隙 */
+	/* 间隙为1em */
+	grid-gap: 1em;
+	gap: 1em;
+	
+	/* 右浮动 */
+	float: right;
+	
+	/* 设置浮点的向上内边距 */
+	margin-top: 250px;
+	
+	/* 去除列表样式 */
+	list-style: none;
+	
+	/* 把图像的上边缘设置在其包含元素上边缘之下0px高的位置*/
+	top: 0;
+	
+	/* 把图像的左边缘设置在其包含元素上边缘之下0px高的位置 */
+	left: 0;
+	
+/* 	position: absolute;
+	left: 500px; */
+	margin-right: 465px;
+	margin-top: 460px;
+}
+
+.content ol li{
+	/* 设置每个小点的大小 */
+	width: 20px;
+	height: 20px;
+
+    /* 设置里面的文字大小 */
+		font-size: 15px;
+		
+	/* line-height 属性设置行间的距离（行高）*/
+	line-height: 20px;
+		
+	/* 浮动左对齐 */
+	float: left;
+	
+	/* 设置文本居中 */
+	text-align: center;
+	
+	/* 把表格做成原点 */
+	border-radius: 2em;
+	
+	/* 设置圆点的边框 */
+	border: 5px solid #af9d9d;
+	
+	margin: 30px;
+}
+
+.nav-2 {
+	width: 1200px;
+	height: 650px;
+	margin: 0 auto;
+	/* background-color: #87CEEB; */
+}
+
+.nav-2 ul{
+	width: 1200px;
+	height: 650px;
+	margin: 0 auto;
+/* 	background-color: lightblue; */
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+	flex-wrap: wrap;
+}
+.nav-2 ul>li{
+	width: 390px;
+	height: 210px;
+/* 	background-color: #7FFFD4; */
+}

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(document).ready(function() {
+			  $('.tab').click(function() {
+			    // 隐藏所有的内容
+			    $('.tab-content').hide();
+			    // 显示当前点击的标签对应的内容
+			    $( $(this).data('target') ).show();
+			  });
+			});
+		</script>
+</head>
+
+<body>
+    <header>
+        <ul class="intro">
+            <li class="pic">
+                <img src="images/鼬.jpg" alt="头像" class="round-image">
+                <p class="id">会飞的白菜</p>
+            </li>
+            <li class="mv">
+                <video controls muted autoplay="autoplay" loop="loop">
+                    <source src="images/鼬.mp4" type="video/mp4" />
+                </video>
+            </li>
+        </ul>
+    </header>
+    <nav>
+        <ul class="nav-cont">
+            <li class="nav-cont_1">
+                <a href="#" class="tab" data-target="#tab1">个人介绍</a>
+                <div id="tab1" class="tab-content">
+                    <ul class="one">
+                        <li>
+                            <p>姓名：宇智波鼬</p>
+                        </li>
+                        <li>
+                            <p>外文名：うちは イタチ</p>
+                        </li>
+                        <li>
+                            <p>性别：男</p>
+                        </li>
+                        <li>
+                            <p>年龄：17-21（享年）</p>
+                        </li>
+                        <li>
+                            <p>出身：火之国·木叶隐村</p>
+                        </li>
+                        <li>
+                            <p>家族：宇智波族</p>
+                        </li>
+                        <li>
+                            <p>生日：6月9日</p>
+                        </li>
+                        <li>
+                            <p>喜欢的食物：三色丸子、纳豆</p>
+                        </li>
+                        <li>
+                            <p>兴趣：逛甜品屋、回想以前愉快的事情</p>
+                        </li>
+                        <li>
+                            <p>讨厌的食物：烤肉</p>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-cont_2">
+                <a href="#" class="tab" data-target="#tab2">个人相册</a>
+                <div id="tab2" class="tab-content" style="display: none;">
+                    <ul class="two">
+                        <li>
+                            <img src="images/OIP-C (1).jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/OIP-C.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/OIP-C (2).jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/OIP-C (3).jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/OIP-C (4).jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/OIP-C (6).jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-cont_3">
+                <a href="#" class="tab" data-target="#tab3">掌握技能</a>
+                <div id="tab3" class="tab-content" style="display: none;">
+                    <ul class="three">
+                        <li>
+                            <img src="images/html.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/css.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/js.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/node.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/vs.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/python.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <!-- <li class="nav-cont_4">
+                <a href="$" class="tab" data-target="#tab4">个人好友</a>
+                <div id="tab4" class="tab-content" style="display: none;">
+                    <ul class="four">
+                        <li>
+                            <img src="images/佐助.webp" alt="">
+                        </li>
+                        <li>
+                            <img src="images/岳.webp" alt="">
+                        </li>
+                        <li>
+                            <img src="images/止水.jpeg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/泉.jpeg" alt="">
+                        </li>
+                        <li>
+                            <img src="images/鬼鲛.webp" alt="">
+                        </li>
+                        <li>
+                            <img src="images/藏" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </li> -->
+        </ul>
+    </nav>
+</body>
+
+</html>

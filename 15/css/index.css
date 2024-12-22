@@ -1,0 +1,209 @@
+/* 通用样式 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('../img/OIP-C.jpg');
+  background-size: cover;
+}
+
+/* 头部区域样式 */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  .sidebar {
+      width: 500px;
+      height: 100%;
+      background-color: #111;
+      position: fixed;
+      left: -500px; /* Initially hidden */
+      top: 0;
+      transition: left 0.3s;
+	  display: flex;
+	  flex-wrap: wrap;
+	  opacity: 0.95; /* 50% 透明度 */
+    }
+  .sidebar img{
+	  margin-top: 20px;
+	  width: 50%;
+  }
+  .sidebar a {
+	margin-top: 20px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+
+.information{
+	display: flex;
+	justify-content: space-around;
+}
+
+.logo{
+	margin-left: 50px;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  /* 模糊化头像示例，可根据喜好调整模糊程度 */
+  filter: blur(1px);
+  margin-right: 10px;
+}
+
+.logo h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* 主体内容区域样式 */
+.featured-section {
+  text-align: center;
+  padding: 50px;
+  margin-bottom: 20px;
+}
+
+.skills-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.skill-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.skill-icon {
+  margin: 0 20px;
+}
+
+.skill-icon img {
+  width: 100px;
+  height: auto;
+  transition: all 0.5s ease;
+}
+
+.works-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.work-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.work-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 25%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin: 20px 5px;
+}
+
+.work-card:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.work-card img {
+  width: 100%;
+}
+
+.achievements-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.achievement-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* 侧边栏样式 */
+aside {
+  background-color: #ddd;
+  padding: 25px;
+  width: 250px;
+  float: right;
+}
+
+.social-links li {
+  list-style-type: none;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-links li a {
+	display: flex;
+	align-items: center;
+}
+
+.social-links li img {
+	margin: 0px 5px;
+}
+
+.social-links li a img {
+  width: 30px;
+  height: 30px;
+}
+
+/* 底部区域样式 */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  clear: both;
+}
+
+  #backToTopButton {
+    position: fixed;
+    bottom: 15%;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    opacity: 0.7;
+    transition: opacity 0.5s;
+  }
+  
+  #backToTopButton:hover {
+    opacity: 1;
+  }
